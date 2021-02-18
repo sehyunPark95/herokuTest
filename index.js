@@ -13,16 +13,17 @@ app.get('/', function (req, res) {
 })
 
 app.post('/',function(req,res){
- 
+  const plz = req.body.userInfo;
   console.log(req.body)
+  console.log(plz)
   
   res.status(200).json({
-    "message": req.body
+    "message": plz
   })
 });
 
 app.post('/test',function(req,res){
-  console.log(req.body)
+  
   
   res.status(200).json({
     "message": "test22"

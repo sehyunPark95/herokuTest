@@ -12,14 +12,21 @@ app.get('/', function (req, res) {
   );
 })
 
-router.post('/post_test',function(req,res){
+app.post('/',function(req,res){
   console.log(req.body)
-  const user_message = req.body.message;
+  
   res.status(200).json({
-    "message":user_message
+    "message": "post"
   })
 });
 
+app.post('/test',function(req,res){
+  console.log(req.body)
+  
+  res.status(200).json({
+    "message": "test22"
+  })
+});
 
 
 app.listen(app.get('port'), function () {

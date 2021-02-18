@@ -1,6 +1,6 @@
 var express = require('express');
 var request = require("request");
-
+const port = process.env.PORT;
 //서버 슬립안하게
 (function () {  
     setInterval(function () {
@@ -23,11 +23,10 @@ var request = require("request");
 
 var app = express();
 
-app.set('port', (process.env.PORT || 8000));
 app.get('/', function (req, res) {
   res.send('Hello World222222');
 })
 
-app.listen(app.get('port'), function () {
+app.listen(port, ()=> {
   console.log('App is running, server is listening on port ', app.get('port'));
 });

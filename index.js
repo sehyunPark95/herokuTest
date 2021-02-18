@@ -12,20 +12,14 @@ app.get('/', function (req, res) {
   );
 })
 
-/*router.post('/post_test',function(req,res){
+router.post('/post_test',function(req,res){
   console.log(req.body)
   const user_message = req.body.message;
   res.status(200).json({
     "message":user_message
   })
 });
-router.get('/te', function(req, res) {
-  res.status(200).json(
-    {
-      "success" : true
-    }
-  );
-});*/
+
 
 
 app.listen(app.get('port'), function () {

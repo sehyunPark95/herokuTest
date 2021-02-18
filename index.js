@@ -12,6 +12,15 @@ app.get('/', function (req, res) {
   );
 })
 
+app.get('/?city=보험', function (req, res) {
+  //res.send('벌써 열번째');
+  res.status(200).json(
+    {
+      "success" : 'qqq'
+    }
+  );
+})
+
 app.post('/?city=보험',function(req,res){
   
   console.log(req.body)

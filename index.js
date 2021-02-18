@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
   //res.send('벌써 열번째');
   res.status(200).json(
     {
-      "success" : true
+      "success" : 'qqq'
     }
   );
 })

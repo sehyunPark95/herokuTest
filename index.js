@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
   res.send('Hello World2222252312321!!');
 })
 
-router.post('post_test',function(req,res){
+router.post('/post_test',function(req,res){
   const user_message = req.body.message;
   res.status(200).json({
     "message":user_message

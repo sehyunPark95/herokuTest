@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
   );
 })
 
-app.post('/city=보험',function(req,res){
+app.post('/?city=보험',function(req,res){
   
   console.log(req.body)
   
@@ -21,7 +21,7 @@ app.post('/city=보험',function(req,res){
   })
 });
 
-app.post('/city=$[ad3268032f7f4e60a453ea5cba049891]',function(req,res){
+app.post('/?city=$[ad3268032f7f4e60a453ea5cba049891]',function(req,res){
   
   console.log(req.body)
   

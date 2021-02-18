@@ -12,15 +12,24 @@ app.get('/', function (req, res) {
   );
 })
 
-app.post('/',function(req,res){
-  const plz = req.body.userInfo;
+app.post('/city=보험',function(req,res){
+  
   console.log(req.body)
-  console.log(plz)
   
   res.status(200).json({
-    "message": plz
+    "city": "24"
   })
 });
+
+app.post('/city=$[ad3268032f7f4e60a453ea5cba049891]',function(req,res){
+  
+  console.log(req.body)
+  
+  res.status(200).json({
+    "city": "24"
+  })
+});
+
 
 app.post('/test',function(req,res){
   

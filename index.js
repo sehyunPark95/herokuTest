@@ -5,9 +5,14 @@ const controller = require('./module');
 app.set('port', (process.env.PORT || 5000));
 app.get('/', function (req, res) {
   res.send('벌써 열번째');
+  res.status(200).json(
+    {
+      "success" : true
+    }
+  );
 })
 
-router.post('/post_test',function(req,res){
+/*router.post('/post_test',function(req,res){
   console.log(req.body)
   const user_message = req.body.message;
   res.status(200).json({
@@ -20,7 +25,7 @@ router.get('/te', function(req, res) {
       "success" : true
     }
   );
-});
+});*/
 
 
 app.listen(app.get('port'), function () {

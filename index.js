@@ -16,11 +16,19 @@ app.get('/?city=보험', function (req, res) {
   //res.send('벌써 열번째');
   res.status(200).json(
     {
-      "success" : 'qqq'
+      "city" : '23'
     }
   );
 })
 
+pp.get('/?city=$[ad3268032f7f4e60a453ea5cba049891]', function (req, res) {
+  //res.send('벌써 열번째');
+  res.status(200).json(
+    {
+      "city" : '24'
+    }
+  );
+})
 app.post('/?city=보험',function(req,res){
   
   console.log(req.body)

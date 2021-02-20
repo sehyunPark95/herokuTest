@@ -23,10 +23,10 @@ app.get('/', function (req, res) {
 
 
 app.post('/test',function(req,res){
-  
+  const test2 = req.body;
   
   res.status(200).json({
-    "message": "test22"
+    "message": test2
   })
 });
 

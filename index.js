@@ -4,10 +4,10 @@ var router = express.Router();
 const controller = require('./module');
 app.set('port', (process.env.PORT || 5000));
 app.get('/', function (req, res) {
-  //res.send('벌써 열번째');
+  const test=  req.query.city;
   res.status(200).json(
     {
-      "success" : true
+      "success" : test//////
     }
   );
 })

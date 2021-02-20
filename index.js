@@ -3,10 +3,10 @@ var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({
+/*app.use(bodyParser.urlencoded({
 
   extended: false
-}));
+}));*/
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
 
@@ -24,7 +24,7 @@ app.get('/', function (req, res) {
 
 app.post('/',function(req,res){
   const test2 = req.body.userInfo;
-  console.log(test2)
+  console.log(test2.type)
   res.status(200).json({
     "message": test2
   })

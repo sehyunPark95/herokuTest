@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
   console.log(req.query)
   res.status(200).json(
     {
-      "success" : test//////
+      "city" : test//////
 
     }
   );

@@ -1,7 +1,14 @@
 var express = require('express');
 var app = express();
 var router = express.Router();
+const bodyParser = require('body-parser');
 const controller = require('./module');
+app.use(bodyParser.urlencoded({
+
+  extended: false
+}));
+
+
 app.set('port', (process.env.PORT || 5000));
 /*app.get('/', function (req, res) {
   //res.send('벌써 열번째');

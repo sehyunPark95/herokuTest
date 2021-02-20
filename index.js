@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
     }
   );
 })
-w
+
 
 app.post('/',function(req,res){
   const test2 = req.body.userInfo.test[0];

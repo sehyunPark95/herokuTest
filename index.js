@@ -1,25 +1,34 @@
 var express = require('express');
 var app = express();
 var router = express.Router();
+const bodyParser = require('body-parser');
 const controller = require('./module');
+app.use(bodyParser.urlencoded({
+
+  extended: false
+}));
+
+
 app.set('port', (process.env.PORT || 5000));
+
 app.get('/', function (req, res) {
   const test=  req.query.city;
   res.status(200).json(
     {
       "success" : test//////
+
     }
   );
 })
 
-router.post('/post_test',function(req,res){
-  console.log(req.body)
-  const user_message = req.body.message;
+
+app.post('/test',function(req,res){
+  
+  
   res.status(200).json({
-    "message":user_message
+    "message": "test22"
   })
 });
-
 
 
 app.listen(app.get('port'), function () {

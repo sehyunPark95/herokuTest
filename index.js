@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
-const controller = require('./module');
 /*app.use(bodyParser.urlencoded({
 
   extended: false

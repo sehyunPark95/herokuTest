@@ -3,10 +3,10 @@ var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
 const controller = require('./module');
-app.use(bodyParser.urlencoded({
+/*app.use(bodyParser.urlencoded({
 
   extended: false
-}));
+}));*/
 
 
 app.set('port', (process.env.PORT || 5000));

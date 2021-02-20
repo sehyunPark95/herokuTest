@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function (req, res) {
-  const test=  req.query.city;w
+  const test=  req.query.city;
   console.log(req.query)
   res.status(200).json(
     {

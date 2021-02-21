@@ -30,7 +30,7 @@ app.post('/',function(req,res){
       "data": [
         {
           "variableName": "test",
-          "value": "variableName에 해당하는 변수를 어떤 값으로 치환할지를 결정합니다"
+          "value": "테스트"
         }
       ]
   })

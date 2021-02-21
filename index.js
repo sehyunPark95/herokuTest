@@ -26,7 +26,13 @@ app.post('/',function(req,res){
   const test2 = req.body.userInfo;
   console.log(test2)
   res.status(200).json({
-    "message": test2
+    /*"message": test2*/
+      "data": [
+        {
+          "variableName": "test",
+          "value": "variableName에 해당하는 변수를 어떤 값으로 치환할지를 결정합니다"
+        }
+      ]
   })
 });
 

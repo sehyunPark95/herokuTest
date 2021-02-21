@@ -24,7 +24,7 @@ app.get('/', function (req, res) {
 
 app.post('/',function(req,res){
   const test2 = req.body.userInfo;
-  console.log(test2.type)
+  console.log(test2)
   res.status(200).json({
     "message": test2
   })

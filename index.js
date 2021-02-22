@@ -31,10 +31,15 @@ app.post('/',function(req,res){
         {
           "variableName": "test",
           "value": "테스트"
-        },
+        }
+      ],
+      "userVariable": [
         {
-          "variableName": "jsonTest",
-          "value": {"test":"success"}
+          "name": "jsonTest",
+          "value": {"test":"success"},
+          "type": "JSON",
+          "action": "ADD",
+          "valueType": "JSON"
         }
       ]
   })

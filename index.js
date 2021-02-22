@@ -31,6 +31,19 @@ app.post('/',function(req,res){
         {
           "variableName": "test",
           "value": "테스트"
+        },
+        {
+          "variableName": "BirthDay",
+          "value": {"test":"success"}
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "BirthDay",
+          "value": {"test":"success"},
+          "type": "JSON",
+          "action": "EQ",
+          "valueType": "JSON"
         }
       ]
   })

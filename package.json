@@ -10,13 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1"
-=======
     "body": "^5.1.0",
     "express": "^4.17.1",
     "parser": "^0.1.4"
->>>>>>> 4188761a928277cc4520c177d9227b9914eab42c
   }
 }

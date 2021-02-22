@@ -33,8 +33,8 @@ app.post('/',function(req,res){
           "value": "테스트"
         },
         {
-          "variableName": "BirthDay",
-          "value": "test"
+          "variableName": "jsonTest",
+          "value": {"test":"success"}
         }
       ]
   })

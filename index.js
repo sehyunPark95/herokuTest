@@ -34,7 +34,7 @@ app.post('/',function(req,res){
         },
         {
           "variableName": "BirthDay",
-          "value": {"test":"success"}
+          "value": "test"
         }
       ]
   })

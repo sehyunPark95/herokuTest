@@ -1,30 +1,38 @@
 var express = require('express');
 var app = express();
 var router = express.Router();
-const controller = require('./module');
+const bodyParser = require('body-parser');
+
+/*app.use(bodyParser.urlencoded({
+
+  extended: false
+}));*/
+app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
+
 app.get('/', function (req, res) {
-  //res.send('벌써 열번째');
+  const test=  req.query.city;
+  console.log(req.query)
   res.status(200).json(
     {
-      "success" : true
+      "city" : test//////
+
     }
   );
 })
 
-app.post('/',function(req,res){
-  console.log(req.body)
-  
-  res.status(200).json({
-    "message": "post"
-  })
-});
 
-app.post('/test',function(req,res){
-  console.log(req.body)
-  
+app.post('/',function(req,res){
+  const test2 = req.body.userInfo;
+  console.log(test2)
   res.status(200).json({
-    "message": "test22"
+    /*"message": test2*/
+      "data": [
+        {
+          "variableName": "test",
+          "value": "테스트"
+        }
+      ]
   })
 });
 

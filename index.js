@@ -46,6 +46,15 @@ app.post('/',function(req,res){
   })
 });
 
+app.post('/cek',function(req,res){
+  const cek = req.body;
+  console.log(cek)
+  res.status(200).json({
+    "qq":"Qq"
+  })
+})
+
+
 
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));

@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
-
+const mongoose = require("mongoose")
 /*app.use(bodyParser.urlencoded({
 
   extended: false
@@ -32,6 +32,9 @@ app.post('/',function(req,res){
         {
           "variableName": "test",
           "value": "테스트"
+        },{
+          "variableName": "BirthDay",
+          "value": "Birth"
         }
       ],
       "userVariable": [

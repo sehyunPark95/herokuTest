@@ -13,7 +13,9 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/', function (req, res) {
 
   console.log(req.query)
-  res.status(200).send("success")
+  res.status(200).json({
+    "city":"yes"
+  })
 })
 
 
@@ -32,13 +34,6 @@ app.post('/',function(req,res){
         }
       ],
       "userVariable": [
-        {
-          "name": "jsonTest",
-          "value": {"test":"success"},
-          "type": "JSON",
-          "action": "EQ",
-          "valueType": "JSON"
-        },
         {
           "name": "test",
           "value": "good",

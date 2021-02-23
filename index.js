@@ -57,7 +57,7 @@ app.post('/',function(req,res){
           "value": {"TEST":"success","TEST2":"success"},
           "type": "TEXT",
           "action": "EQ",
-          "valueType": "TEXT"
+          "valueType": "JSON"
         }
       ]
   })

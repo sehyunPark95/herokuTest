@@ -44,7 +44,7 @@ app.post('/',function(req,res){
         {
           "name": "jsonTest",
           "value": {"test":"success"},
-          "type": "TEXT",
+          "type": "JSON",
           "action": "EQ",
           "valueType": "JSON"
         }

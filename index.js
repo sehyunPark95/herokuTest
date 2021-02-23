@@ -11,15 +11,9 @@ app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function (req, res) {
-  const test=  req.query.city;
-  console.log(req.query)
-  res.status(200).json(
-    {
-      "city" : test//////
 
-    }
-  );
-  res.send("Hello")
+  console.log(req.query)
+  res.status(200).send("success")
 })
 
 
@@ -54,7 +48,7 @@ app.post('/',function(req,res){
         },
         {
           "name": "jsonTest",
-          "value": {"TEST":"success","TEST2":"success"},
+          "value": {"test":"success"},
           "type": "TEXT",
           "action": "EQ",
           "valueType": "JSON"

@@ -44,6 +44,13 @@ app.post('/',function(req,res){
           "type": "JSON",
           "action": "EQ",
           "valueType": "JSON"
+        },
+        {
+          "name": "test",
+          "value": "good",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
         }
       ]
   })

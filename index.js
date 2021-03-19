@@ -26,7 +26,6 @@ app.post('/',function(req,res){
   //////////////////////////
   var logs = new Logs();
   logs.data = test2;
-
   logs.save(function(err){
       if(err){
           console.error(err);

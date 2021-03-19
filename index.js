@@ -43,7 +43,7 @@ app.post('/',function(req,res){
       "data": [
         {
           "variableName": "test",
-          "value": "테스트"
+          "value": "테스트값변경완료"
         },{
           "variableName": "BirthDay",
           "value": "Birth"

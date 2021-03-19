@@ -2,8 +2,6 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
-const mongoose = require("mongoose");
-var Logs = require('./logs')
 /*app.use(bodyParser.urlencoded({
 
 }));*/

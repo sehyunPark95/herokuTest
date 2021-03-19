@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
 app.post('/',function(req,res){
   const test2 = req.body.userInfo;
   console.log(test2)
-  res.status(200).json({
+  res.status(200).json( {
     /*"message": test2*/
       "data": [
         {
@@ -36,7 +36,7 @@ app.post('/',function(req,res){
       "userVariable": [
         {
           "name": "test",
-          "value": "good",
+          "value": "success",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -50,7 +50,7 @@ app.post('/',function(req,res){
         }
       ]
   })
-});
+})
 
 app.post('/cek',function(req,res){
   const cek = req.body;

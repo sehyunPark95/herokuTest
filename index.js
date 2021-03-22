@@ -19,21 +19,6 @@ app.get('/', function (req, res) {
 
 app.post('/',function(req,res){
   const test2 = req.body.userInfo;
-  console.log(test2)
-  //////////////////////////
-  var logs = new Logs();
-  logs.data = test2;
-  logs.save(function(err){
-      if(err){
-          console.error(err);
-          res.json({result: 0});
-          return;
-      }
-
-      //res.json({result: 1});
-
-  });
-///////////////////////
   res.status(200).json( {
     /*"message": test2*/
       "data": [

@@ -59,8 +59,11 @@ app.post('/test',function(req,res){
           "variableName": "name",
           "value": "김생명"
         },{
-          "variableName": "BirthDay",
-          "value": "880101"
+          "variableName": "doc_list",
+          "value": "보험금청구"
+        },{
+          "variableName": "same_status",
+          "value": "Y"
         }
       ],
       "userVariable": [
@@ -72,8 +75,15 @@ app.post('/test',function(req,res){
           "valueType": "TEXT"
         },
         {
-          "name": "BirthDay",
-          "value": "880101",
+          "name": "doc_list",
+          "value": "보험금청구",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "same_status",
+          "value": "Y",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

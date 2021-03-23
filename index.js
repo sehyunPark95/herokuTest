@@ -41,9 +41,9 @@ app.post('/',function(req,res){
         {
           "name": "BirthDay",
           "value": "951005",
-          "type": "text",
+          "type": "TEXT",
           "action": "EQ",
-          "valueType": "text"
+          "valueType": "TEXT"
         }
       ]
   })

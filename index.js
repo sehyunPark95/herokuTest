@@ -63,7 +63,7 @@ app.post('/test',function(req,res){
           "value": "보험금청구"
         },{
           "variableName": "same_status",
-          "value": "Y"
+          "value": "N"
         }
       ],
       "userVariable": [
@@ -83,7 +83,7 @@ app.post('/test',function(req,res){
         },
         {
           "name": "same_status",
-          "value": "Y",
+          "value": "N",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

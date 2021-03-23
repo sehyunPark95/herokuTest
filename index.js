@@ -20,30 +20,30 @@ app.get('/', function (req, res) {
 app.post('/',function(req,res){
   const test2 = req.body.userInfo;
   res.status(200).json( {
-    /*"message": test2*/
       "data": [
         {
-          "variableName": "test",
-          "value": "테스트값변경완료"
-        },{
-          "variableName": "BirthDay",
-          "value": "Birth"
+          "variableName":"custNm",
+          "value":"홍길동"
+        },
+        {
+          "variableName": "reason",
+          "value": "입원기간이 3일 이하로 확인됩니다.약관상 입원 보험금은 최초 입원일로부터 4일 이상 계속 입원하였을때 3일 초과 1일당 입원 보험금이 발생합니다.따라서 청구하신 보험금은 3일 이하 입원에 해당되어 금번 청구하신 보험금은 해당무 처리 되오니 이점 깊은 양해 바랍니다."
         }
       ],
       "userVariable": [
         {
-          "name": "test",
-          "value": "success",
+          "name": "custNm",
+          "value": "홍길동",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },
         {
-          "name": "jsonTest",
-          "value": {"test":"success"},
-          "type": "JSON",
+          "name": "BirthDay",
+          "value": "951005",
+          "type": "text",
           "action": "EQ",
-          "valueType": "JSON"
+          "valueType": "text"
         }
       ]
   })
@@ -74,7 +74,7 @@ app.post('/보험심사1',function(req,res){
         {
           "name": "BirthDay",
           "value": "880101",
-          "type": "NUMBER",
+          "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         }

@@ -51,7 +51,7 @@ app.post('/',function(req,res){
 
 /////////보험심사팀(조사/서면)////////////
 
-app.post('/보험심사1',function(req,res){
+app.post('/test',function(req,res){
   res.status(200).json( {
     /*"message": test2*/
       "data": [

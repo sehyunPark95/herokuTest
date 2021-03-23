@@ -49,7 +49,42 @@ app.post('/',function(req,res){
   })
 })
 
-app.post('/cek',function(req,res){
+/////////보험심사팀(조사/서면)////////////
+
+app.post('/보험심사1',function(req,res){
+  res.status(200).json( {
+    /*"message": test2*/
+      "data": [
+        {
+          "variableName": "name",
+          "value": "김생명"
+        },{
+          "variableName": "BirthDay",
+          "value": "880101"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "custNm",
+          "value": "김생명",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "BirthDay",
+          "value": "880101",
+          "type": "NUMBER",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+  })
+})
+
+//////////////////////////////////////////////
+
+app.post('/456',function(req,res){
   const cek = req.body;
   console.log(cek)
   res.status(200).json({

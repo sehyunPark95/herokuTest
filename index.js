@@ -171,6 +171,91 @@ app.post('/max',function(req,res){
             "action": "EQ",
             "valueType": "TEXT"
           }
+          ,
+          {
+            "name": "birthYmd",
+            "value": "951005",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "acntCnt",
+            "value": 3,
+            "type": "NUMBER",
+            "action": "EQ",
+            "valueType": "NUMBER"
+          },
+          {
+            "name": "acntNm1",
+            "value": "국민은행",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "acntNm2",
+            "value": "신한은행",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "acntNm3",
+            "value": "SC제일은행",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "acntNm4",
+            "value": "카카오뱅크",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "acntNm5",
+            "value": "우리은행",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "acntNo1",
+            "value": "57099309871",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "acntNo2",
+            "value": "57099309872",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "acntNo3",
+            "value": "57099309873",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "acntNo4",
+            "value": "57099309874",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "acntNo5",
+            "value": "57099309875",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          }
         ]
     })
   })

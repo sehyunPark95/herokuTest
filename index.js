@@ -96,6 +96,7 @@ app.post('/test',function(req,res){
 //////////////////////////////////////////////
 
 ///////////////////납입최고//////////////////////////
+
 app.post('/max',function(req,res){
     const test2 = req.body.userInfo;
     console.log(test2)
@@ -181,10 +182,10 @@ app.post('/max',function(req,res){
           },
           {
             "name": "acntCnt",
-            "value": 3,
-            "type": "NUMBER",
+            "value": "3",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "NUMBER"
+            "valueType": "TEXT"
           },
           {
             "name": "acntNm1",
@@ -259,6 +260,14 @@ app.post('/max',function(req,res){
         ]
     })
   })
+//////////////////출금여부//////////////////
+app.post('/maxYn',function(req,res){
+
+    res.status(200).json( {
+        "valid":true
+    })
+  })
+
 /////////////////////////////////////////////////
 app.post('/456',function(req,res){
   const cek = req.body;

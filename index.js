@@ -57,7 +57,7 @@ app.post('/test',function(req,res){
     /*"message": test2*/
       "data": [
         {
-          "variableName": "cusNm",
+          "variableName": "custNm",
           "value": "김생명"
         },{
           "variableName": "doc_list",
@@ -69,7 +69,7 @@ app.post('/test',function(req,res){
       ],
       "userVariable": [
         {
-          "name": "cusNm",
+          "name": "custNm",
           "value": "김생명",
           "type": "TEXT",
           "action": "EQ",

@@ -182,10 +182,10 @@ app.post('/max',function(req,res){
           },
           {
             "name": "acntCnt",
-            "value": "3",
-            "type": "TEXT",
+            "value": 3,
+            "type": "NUMBER",
             "action": "EQ",
-            "valueType": "TEXT"
+            "valueType": "NUMBER"
           },
           {
             "name": "acntNm1",

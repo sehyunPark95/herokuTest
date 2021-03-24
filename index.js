@@ -19,6 +19,8 @@ app.get('/', function (req, res) {
 
 app.post('/',function(req,res){
   const test2 = req.body.userInfo;
+  console.log(test2)
+  console.log(req.body)
   res.status(200).json( {
       "data": [
         {

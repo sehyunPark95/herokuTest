@@ -95,6 +95,86 @@ app.post('/test',function(req,res){
 
 //////////////////////////////////////////////
 
+///////////////////납입최고//////////////////////////
+app.post('/max',function(req,res){
+    const test2 = req.body.userInfo;
+    console.log(test2)
+    res.status(200).json( {
+        "data": [
+          {
+            "variableName":"custNm",
+            "value":"홍길동"
+          }
+        ],
+        "userVariable": [
+          {
+            "name": "custNm",
+            "value": "홍길동",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "shrtProdNm",
+            "value": "실속 하나로 암보험",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "payDtm",
+            "value": "2021년 3월",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "payDt",
+            "value": "2021년 3월 31일",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          }
+          ,
+          {
+            "name": "cntrCnt",
+            "value": "3",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "dbDiv",
+            "value": "R",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "insuLoanYn",
+            "value": "Y",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "interestAmt",
+            "value": "50000",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "unpaidAmt",
+            "value": "1000000",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          }
+        ]
+    })
+  })
+/////////////////////////////////////////////////
 app.post('/456',function(req,res){
   const cek = req.body;
   console.log(cek)

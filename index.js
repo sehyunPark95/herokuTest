@@ -269,13 +269,12 @@ app.post('/maxYn',function(req,res){
   })
 
 /////////////////////////////////////////////////
-app.post('/456',function(req,res){
-  const cek = req.body;
-  console.log(cek)
-  res.status(200).json({
-    "qq":"Qq"
+app.post('/maxYn',function(req,res){
+    console.log(req.body)
+    res.status(200).json( {
+        "valid":"true"
+    })
   })
-})
 
 
 app.listen(app.get('port'), function () {

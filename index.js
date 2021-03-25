@@ -263,9 +263,8 @@ app.post('/max',function(req,res){
 //////////////////출금여부//////////////////
 app.post('/maxYn',function(req,res){
   console.log(req)
-  console.log(req.body)
     res.status(200).json( {
-        "valid":"true"
+        "valid":"pass"
     })
   })
 

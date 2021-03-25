@@ -18,14 +18,16 @@ app.get('/', function (req, res) {
 
 
 app.post('/',function(req,res){
- 
+  const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;
+  var name = "홍길동"
+  name = test == "01092400783" ? "박세현" : name
   console.log(req.body.userInfo,"---------------------------");
   console.log(JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee);
   res.status(200).json( {
       "data": [
         {
           "variableName":"custNm",
-          "value":"홍길동"
+          "value": name
         },
         {
           "variableName": "reason",

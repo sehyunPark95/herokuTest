@@ -18,8 +18,7 @@ app.get('/', function (req, res) {
 
 
 app.post('/',function(req,res){
-  const test2 = req.body.userInfo;
-  console.log(test2,"--------------------------")
+ 
   console.log(req.body)
   res.status(200).json( {
       "data": [
@@ -265,16 +264,7 @@ app.post('/max',function(req,res){
 app.post('/maxYn',function(req,res){
   console.log(req)
     res.status(200).json( {
-        "valid":"pass"
-    })
-  })
-
-///////////////////CEK//////////////////////////
-app.post('/cek',function(req,res){
-    console.log(req.body)
-    console.log(req)
-    res.status(200).json( {
-        "valid":"true"
+        "valid":"denial"
     })
   })
 

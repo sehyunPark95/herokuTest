@@ -99,7 +99,7 @@ app.post('/test',function(req,res){
 
 app.post('/max',function(req,res){
     const test2 = req.body.userInfo;
-    console.log(test2)
+    //console.log(test2)
     res.status(200).json( {
         "data": [
           {
@@ -271,6 +271,7 @@ app.post('/maxYn',function(req,res){
 /////////////////////////////////////////////////
 app.post('/maxYn',function(req,res){
     console.log(req.body)
+    console.log(req)
     res.status(200).json( {
         "valid":"true"
     })

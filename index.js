@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
 app.post('/',function(req,res){
  
   console.log(req.body.userInfo,"---------------------------");
-  console.log(req.body.userInfo.userVariables.cicRequest.value.session);
+  console.log(JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee);
   res.status(200).json( {
       "data": [
         {

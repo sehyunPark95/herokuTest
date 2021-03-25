@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
 app.post('/',function(req,res){
   
   console.log(req.body,"----------------");
-  console.log(req.body.userVariables);
+  console.log(req.body.userInfo);
   res.status(200).json( {
       "data": [
         {

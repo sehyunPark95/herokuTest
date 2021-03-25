@@ -21,7 +21,7 @@ app.post('/',function(req,res){
   
   console.log(req.body,"----------------");
   console.log(req.body.userInfo,"---------------------------");
-  console.log(req.body.userInfo.userVariables.cicRequest.value.session);
+  console.log(req.body.userInfo.userVariables.cicRequest.session.callInfo.callee);
   res.status(200).json( {
       "data": [
         {

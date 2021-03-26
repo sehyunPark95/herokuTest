@@ -48,6 +48,19 @@ app.post('/',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
+        },
+        {
+          "name": "code",
+          "value": "04L001M002S003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },{
+          "name": "variable1",
+          "value": "위, 십이지장",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
         }
       ]
   })

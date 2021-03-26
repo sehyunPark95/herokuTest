@@ -21,8 +21,8 @@ app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;
   var name = "홍길동"
   name = test == "01092400783" ? "박세현" : name
-  console.log(req.body.userInfo,"---------------------------");
-  console.log(JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee);
+  var ran = Math.floor(Math.random() * 2);
+  var code = ['04L002M004S006','04L001M002S003'];
   res.status(200).json( {
       "data": [
         {
@@ -51,7 +51,7 @@ app.post('/',function(req,res){
         },
         {
           "name": "code",
-          "value": "04L001M002S003",
+          "value": code[ran],
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

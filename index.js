@@ -22,7 +22,7 @@ app.post('/',function(req,res){
   var name = "홍길동"
   name = test == "01092400783" ? "박세현" : name
   var ran = Math.floor(Math.random() * 2);
-  var code = ['04L002M004S006','04L001M002S003'];
+  var codeList = ['04L002M004S006','04L001M002S003'];
   res.status(200).json( {
       "data": [
         {
@@ -51,7 +51,7 @@ app.post('/',function(req,res){
         },
         {
           "name": "code",
-          "value": code[ran],
+          "value": codeList[ran],
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

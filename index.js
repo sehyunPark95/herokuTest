@@ -93,7 +93,7 @@ app.post('/test',function(req,res){
         },
         {
           "name": "doc_list",
-          "value": "보험금청구",
+          "value": "입원확인서",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

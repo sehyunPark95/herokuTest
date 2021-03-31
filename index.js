@@ -297,7 +297,7 @@ app.post('/happy',function(req,res){
     }else if(now == "400201"){
         /*answer == 'Y' ? */nextCode = "100101"
     }
-  console.log(confirm_notice)
+
     res.status(200).json( {
       /*"message": test2*/
         "data": [

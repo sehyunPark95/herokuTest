@@ -288,14 +288,14 @@ app.post('/maxYn',function(req,res){
 
 app.post('/happy',function(req,res){
 
-    var confirm_notice = req.body.userInfo.userVariables.confirm_notice.value;
+    var nextCode = "";
     var now = req.body.userInfo.userVariables.now.value;
     var answer = req.body.userInfo.userVariables.answer.value;
     console.log(req.body.userInfo)
     if(now == "null"){
-        confirm_notice = "400201"
+        nextCode = "400201"
     }else if(now == "400201"){
-        /*answer == 'Y' ? */confirm_notice = "100101"
+        /*answer == 'Y' ? */nextCode = "100101"
     }
   console.log(confirm_notice)
     res.status(200).json( {
@@ -308,8 +308,8 @@ app.post('/happy',function(req,res){
         ],
         "userVariable": [
           {
-            "name": "confirm_notice",
-            "value": confirm_notice,
+            "name": "next",
+            "value": nextCode,
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"

@@ -291,12 +291,13 @@ app.post('/happy',function(req,res){
     var confirm_notice = req.body.userInfo.userVariables.confirm_notice;
     var now = req.body.userInfo.userVariables.now;
     var answer = req.body.userInfo.userVariables.answer;
-
+    console.log(req.body.userInfo)
     if(now == "null"){
         confirm_notice = "400201"
     }else if(now == "400201"){
         /*answer == 'Y' ? */confirm_notice = "100101"
     }
+  console.log(confirm_notice)
     res.status(200).json( {
       /*"message": test2*/
         "data": [

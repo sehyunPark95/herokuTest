@@ -288,7 +288,7 @@ app.post('/maxYn',function(req,res){
 
 app.post('/happy',function(req,res){
 
-    var nextCode = "";
+    let nextCode = "";
     var now = req.body.userInfo.userVariables.now.value;
     var answer = req.body.userInfo.userVariables.answer.value;
     console.log(req.body.userInfo)

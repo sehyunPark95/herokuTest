@@ -288,9 +288,9 @@ app.post('/maxYn',function(req,res){
 
 app.post('/happy',function(req,res){
 
-    var confirm_notice = req.body.userInfo.userVariables.confirm_notice;
-    var now = req.body.userInfo.userVariables.now;
-    var answer = req.body.userInfo.userVariables.answer;
+    var confirm_notice = req.body.userInfo.userVariables.confirm_notice.value;
+    var now = req.body.userInfo.userVariables.now.value;
+    var answer = req.body.userInfo.userVariables.answer.value;
     console.log(req.body.userInfo)
     if(now == "null"){
         confirm_notice = "400201"

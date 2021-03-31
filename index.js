@@ -284,6 +284,42 @@ app.post('/maxYn',function(req,res){
     })
   })
 
+////////////////해피해피////////////////////
+
+app.post('/happy',function(req,res){
+
+    var confirm_notice = req.body.userInfo.userVariables.confirm_notice;
+    var now = req.body.userInfo.userVariables.now;
+    var answer = req.body.userInfo.userVariables.answer;
+
+    if(now == "null"){
+        confirm_notice = "400201"
+    }else if(now == "400201"){
+        /*answer == 'Y' ? */confirm_notice = "100101"
+    }
+    res.status(200).json( {
+      /*"message": test2*/
+        "data": [
+          {
+            "variableName": "custNm",
+            "value": "박세현"
+          }
+        ],
+        "userVariable": [
+          {
+            "name": "confirm_notice",
+            "value": confirm_notice,
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          }
+          
+        ]
+    })
+  })
+
+//////////////////////////////////////
+
 
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));

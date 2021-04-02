@@ -286,7 +286,7 @@ app.post('/maxYn',function(req,res){
 ///////////////////해피 커스텀////////////////////
 
 app.post('/happy2',function(req,res){
-  console.log(req)
+  console.log(req.body.userVariables)
   let nextCode = "";
   var now = req.body.userVariables.now.value;
   if(now == "null"){

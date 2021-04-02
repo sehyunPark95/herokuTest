@@ -10,7 +10,7 @@ const path = require('path');
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
 
-app.get('/', (req, res) => {
+app.get('/tt', (req, res) => {
   res.sendFile(path.join(__dirname,'html','aes_test.html'));
 });
 

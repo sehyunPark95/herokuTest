@@ -2,19 +2,17 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
+var fs = require('fs');
+const path = require('path');
 /*app.use(bodyParser.urlencoded({
 
 }));*/
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
 
-app.get('/', function (req, res) {
-
-  console.log(req.query)
-  res.status(200).json({
-    "city":"yes"
-  })
-})
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname,'html','aes_test.html'));
+});
 
 
 app.post('/',function(req,res){
@@ -286,7 +284,7 @@ app.post('/maxYn',function(req,res){
 ///////////////////해피 커스텀////////////////////
 
 app.post('/happy2',function(req,res){
-  console.log(req.body.userVariables)
+  console.log(req)
   let nextCode = "";
   var now = req.body.userVariables.now.value;
   if(now == "null"){

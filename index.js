@@ -2,18 +2,12 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
-var fs = require('fs');
-const path = require('path');
+
 /*app.use(bodyParser.urlencoded({
 
 }));*/
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
-
-app.get('/tt', (req, res) => {
-  res.sendFile(path.join(__dirname,'html','aes_test.html'));
-});
-
 
 app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;

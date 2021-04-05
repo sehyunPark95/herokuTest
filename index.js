@@ -278,9 +278,10 @@ app.post('/maxYn',function(req,res){
 ///////////////////해피 커스텀////////////////////
 
 app.post('/happy2',function(req,res){
-  console.log(req)
+ 
   let nextCode = "";
   var now = req.body.userVariables.now.value;
+  console.log(now)
   if(now == "null"){
     nextCode = "400201"
   }else if(now == "400201"){
@@ -302,7 +303,7 @@ app.post('/happy2',function(req,res){
   }else if(now == "300902"){
     nextCode = "300202"
   }
-  if(now ="null"){
+  if(now =="null"){
     res.status(200).json( {
       "valid":nextCode,
       "userVariable": [

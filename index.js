@@ -407,6 +407,40 @@ app.post('/happy',function(req,res){
 
 //////////////////////////////////////
 
+//////////////////해피테스트//////////////////
+
+app.post('/happy3',function(req,res){
+
+  let nextCode = "";
+  var now = req.body.userVariables.now.value;
+  console.log(req.body.userInfo)
+  if(now == "null"){
+    nextCode = "0001"
+  }else if(now =="0001"){
+    nextCode = "0002"
+  }
+  res.status(200).json( {
+    /*"message": test2*/
+      "data": [
+        {
+          "variableName": "custNm",
+          "value": "박세현"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "next",
+          "value": nextCode,
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+  })
+})
+
+/////////////////////////////////////
+
 
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));

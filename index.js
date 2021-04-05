@@ -434,6 +434,12 @@ app.post('/happy3',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
+        },{
+          "name": "custNm",
+          "value": "박세현",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
         }
       ]
   })

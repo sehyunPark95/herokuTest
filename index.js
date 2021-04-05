@@ -412,7 +412,7 @@ app.post('/happy',function(req,res){
 app.post('/happy3',function(req,res){
 
   let nextCode = "";
-  var now = req.body.userVariables.now.value;
+  var now = req.body.userInfo.userVariables.now.value;
   console.log(req.body.userInfo)
   if(now == "null"){
     nextCode = "0001"

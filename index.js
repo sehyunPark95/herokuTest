@@ -303,88 +303,11 @@ app.post('/happy2',function(req,res){
   }else if(now == "300902"){
     nextCode = "300202"
   }
-  if(now =="null"){
-    res.status(200).json( {
-      "valid":nextCode,
-      "userVariable": [
-        {
-          "name": "shrtProdNm",
-          "value": "실속 하나로 암보험",
-          "type": "Text",
-          "action": "EQ",
-          "valueType": "Text"
-        },
-        {
-          "name": "cntrDt",
-          "value": "8월 12일",
-          "type": "Text",
-          "action": "EQ",
-          "valueType": "Text"
-        },
-        {
-          "name": "plannerNm",
-          "value": "아이유",
-          "type": "Text",
-          "action": "EQ",
-          "valueType": "Text"
-        },
-        {
-          "name": "insurer",
-          "value": "홍길동",
-          "type": "Text",
-          "action": "EQ",
-          "valueType": "Text"
-        },
-        {
-          "name": "insured",
-          "value": "홍길순",
-          "type": "Text",
-          "action": "EQ",
-          "valueType": "Text"
-        },
-        {
-          "name": "payPeriod",
-          "value": "5년",
-          "type": "Text",
-          "action": "EQ",
-          "valueType": "Text"
-        },
-        {
-          "name": "insuPeriod",
-          "value": "20년",
-          "type": "Text",
-          "action": "EQ",
-          "valueType": "Text"
-        },
-        {
-          "name": "payAmt",
-          "value": "56,700",
-          "type": "Text",
-          "action": "EQ",
-          "valueType": "Text"
-        },
-        {
-          "name": "birthYmd",
-          "value": "951005",
-          "type": "Text",
-          "action": "EQ",
-          "valueType": "Text"
-        },
-        {
-          "name": "custNm",
-          "value": "박세현",
-          "type": "Text",
-          "action": "EQ",
-          "valueType": "Text"
-        }
-      ]
-  })
-  }else{
+  
     res.status(200).json({
       "valid":nextCode
   })
-  }
-    
+  
   })
 
 ////////////////////////////////////////////
@@ -398,11 +321,6 @@ app.post('/happy',function(req,res){
     var now = req.body.userInfo.userVariables.now.value;
     var answer = req.body.userInfo.userVariables.answer.value;
     console.log(req.body.userInfo)
-    if(now == "null"){
-        nextCode = "400201"
-    }else if(now == "400201"){
-        /*answer == 'Y' ? */nextCode = "100101"
-    }
 
     res.status(200).json( {
       /*"message": test2*/
@@ -414,13 +332,75 @@ app.post('/happy',function(req,res){
         ],
         "userVariable": [
           {
-            "name": "next",
-            "value": nextCode,
-            "type": "TEXT",
+            "name": "shrtProdNm",
+            "value": "실속 하나로 암보험",
+            "type": "Text",
             "action": "EQ",
-            "valueType": "TEXT"
+            "valueType": "Text"
+          },
+          {
+            "name": "cntrDt",
+            "value": "8월 12일",
+            "type": "Text",
+            "action": "EQ",
+            "valueType": "Text"
+          },
+          {
+            "name": "plannerNm",
+            "value": "아이유",
+            "type": "Text",
+            "action": "EQ",
+            "valueType": "Text"
+          },
+          {
+            "name": "insurer",
+            "value": "홍길동",
+            "type": "Text",
+            "action": "EQ",
+            "valueType": "Text"
+          },
+          {
+            "name": "insured",
+            "value": "홍길순",
+            "type": "Text",
+            "action": "EQ",
+            "valueType": "Text"
+          },
+          {
+            "name": "payPeriod",
+            "value": "5년",
+            "type": "Text",
+            "action": "EQ",
+            "valueType": "Text"
+          },
+          {
+            "name": "insuPeriod",
+            "value": "20년",
+            "type": "Text",
+            "action": "EQ",
+            "valueType": "Text"
+          },
+          {
+            "name": "payAmt",
+            "value": "56,700",
+            "type": "Text",
+            "action": "EQ",
+            "valueType": "Text"
+          },
+          {
+            "name": "birthYmd",
+            "value": "951005",
+            "type": "Text",
+            "action": "EQ",
+            "valueType": "Text"
+          },
+          {
+            "name": "custNm",
+            "value": "박세현",
+            "type": "Text",
+            "action": "EQ",
+            "valueType": "Text"
           }
-          
         ]
     })
   })

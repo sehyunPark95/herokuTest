@@ -334,72 +334,72 @@ app.post('/happy',function(req,res){
           {
             "name": "shrtProdNm",
             "value": "실속 하나로 암보험",
-            "type": "Text",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "Text"
+            "valueType": "TEXT"
           },
           {
             "name": "cntrDt",
             "value": "8월 12일",
-            "type": "Text",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "Text"
+            "valueType": "TEXT"
           },
           {
             "name": "plannerNm",
             "value": "아이유",
-            "type": "Text",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "Text"
+            "valueType": "TEXT"
           },
           {
             "name": "insurer",
             "value": "홍길동",
-            "type": "Text",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "Text"
+            "valueType": "TEXT"
           },
           {
             "name": "insured",
             "value": "홍길순",
-            "type": "Text",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "Text"
+            "valueType": "TEXT"
           },
           {
             "name": "payPeriod",
             "value": "5년",
-            "type": "Text",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "Text"
+            "valueType": "TEXT"
           },
           {
             "name": "insuPeriod",
             "value": "20년",
-            "type": "Text",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "Text"
+            "valueType": "TEXT"
           },
           {
             "name": "payAmt",
             "value": "56,700",
-            "type": "Text",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "Text"
+            "valueType": "TEXT"
           },
           {
             "name": "birthYmd",
             "value": "951005",
-            "type": "Text",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "Text"
+            "valueType": "TEXT"
           },
           {
             "name": "custNm",
             "value": "박세현",
-            "type": "Text",
+            "type": "TEXT",
             "action": "EQ",
-            "valueType": "Text"
+            "valueType": "TEXT"
           }
         ]
     })

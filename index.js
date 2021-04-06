@@ -12,6 +12,9 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/',function(req,res){
   res.sendFile(__dirname+'/log.html')
 })
+app.get('/log.css',function(req,res){
+  res.sendFile(__dirname+'/log.css')
+})
 app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;
   var name = "홍길동"

@@ -2,12 +2,10 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
-
+const {Log} = require('./logs');
 
 //커밋테스트
-/*app.use(bodyParser.urlencoded({
-
-}));*/
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
 
@@ -323,7 +321,16 @@ app.post('/happy',function(req,res){
     var now = req.body.userInfo.userVariables.now.value;
     var answer = req.body.userInfo.userVariables.answer.value;
     console.log(req.body.userInfo)
-
+    var log = new Log(
+      {name:"happy",userInfo:req.body.userInfo,userVariables:req.body.userInfo.userVariables}
+    );
+      log.save(function(error,data){
+        if(error){
+          console.log(error)
+        }else{
+          console.log('saved!')
+        }
+      });
     res.status(200).json( {
       /*"message": test2*/
         "data": [
@@ -450,7 +457,7 @@ app.post('/happy3',function(req,res){
 /////////////////////////////////////
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://sehyun:mindwareworks1!@cluster0.lvteo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://dbUser:<password>@cluster0.9wd6b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB connected...'))
 .catch(error => console.log(error))

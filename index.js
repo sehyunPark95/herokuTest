@@ -15,13 +15,6 @@ app.get('/',function(req,res){
 app.get('/log.css',function(req,res){
   res.sendFile(__dirname+'/log.css')
 })
-app.get('/jquery-sakura.css',function(req,res){
-  res.sendFile(__dirname+'/jquery-sakura.css')
-})
-app.get('/jquery-sakura.js',function(req,res){
-  res.sendFile(__dirname+'/jquery-sakura.js')
-})
-
 app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;
   var name = "홍길동"

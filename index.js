@@ -3,7 +3,7 @@ var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
 const {Log} = require('./logs');
-
+var moment = require('moment');
 //커밋테스트
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
@@ -322,7 +322,7 @@ app.post('/happy',function(req,res){
     var answer = req.body.userInfo.userVariables.answer.value;
     console.log(req.body.userInfo)
     var log = new Log(
-      {name:"happy",userInfo:req.body.userInfo,userVariables:req.body.userInfo.userVariables}
+      {name:"happy",userInfo:req.body.userInfo,userVariables:req.body.userInfo.userVariables,time:moment().format('YYYY-MM-DD HH:mm:ss')}
     );
       log.save(function(error,data){
         if(error){

@@ -9,6 +9,9 @@ const logSchema = mongoose.Schema({
     },
     userVariables:{
         type:Array
+    },
+    time:{
+        type:String
     }
 });
 

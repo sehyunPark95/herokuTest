@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
-
+//커밋테스트
 /*app.use(bodyParser.urlencoded({
 
 }));*/

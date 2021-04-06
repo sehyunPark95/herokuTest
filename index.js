@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
+
+
 //커밋테스트
 /*app.use(bodyParser.urlencoded({
 
@@ -446,6 +448,12 @@ app.post('/happy3',function(req,res){
 })
 
 /////////////////////////////////////
+
+const mongoose = require('mongoose')
+mongoose.connect('mongodb+srv://sehyun:mindwareworks1!@cluster0.lvteo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+    useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
+}).then(() => console.log('MongoDB connected...'))
+.catch(error => console.log(error))
 
 
 app.listen(app.get('port'), function () {

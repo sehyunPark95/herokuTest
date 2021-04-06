@@ -15,6 +15,13 @@ app.get('/',function(req,res){
 app.get('/log.css',function(req,res){
   res.sendFile(__dirname+'/log.css')
 })
+app.post('/find',function(req,res){
+  Log.find().toArray(function (err, docs) {
+    console.log('== Find ALL, toArray');
+    console.log(docs);
+    res.json({docs})
+ });
+});
 app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;
   var name = "홍길동"

@@ -15,7 +15,7 @@ app.get('/',function(req,res){
 app.get('/log.css',function(req,res){
   res.sendFile(__dirname+'/log.css')
 })
-app.post('/find',function(req,res){
+app.get('/find',function(req,res){
   Log.find().toArray(function (err, docs) {
     console.log('== Find ALL, toArray');
     console.log(docs);

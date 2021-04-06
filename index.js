@@ -4,11 +4,14 @@ var router = express.Router();
 const bodyParser = require('body-parser');
 const {Log} = require('./logs');
 var moment = require('moment');
+moment.locale('ko');
 //커밋테스트
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
-
+app.get('/',function(req,res){
+  res.sendFile(__dirname+'/log.html')
+})
 app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;
   var name = "홍길동"

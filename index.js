@@ -457,7 +457,7 @@ app.post('/happy3',function(req,res){
 /////////////////////////////////////
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://dbUser:<password>@cluster0.9wd6b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://sehyun:mindwareworks1!@cluster0.lvteo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB connected...'))
 .catch(error => console.log(error))

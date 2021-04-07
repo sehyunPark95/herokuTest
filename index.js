@@ -16,10 +16,10 @@ app.get('/log.css',function(req,res){
   res.sendFile(__dirname+'/log.css')
 })
 app.get('/find',function(req,res){
-  Log.find().toArray(function (err, docs) {
+  const collection = Log.collection('logs')
+  collection.find().toArray(function (err, docs) {
     console.log('== Find ALL, toArray');
     console.log(docs);
-    res.json({docs})
  });
 });
 app.post('/',function(req,res){
@@ -344,6 +344,8 @@ app.post('/happy',function(req,res){
           console.log('saved!')
         }
       });
+
+
     res.status(200).json( {
       /*"message": test2*/
         "data": [
@@ -419,6 +421,77 @@ app.post('/happy',function(req,res){
           {
             "name": "custNm",
             "value": "박세현",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "dialogue1",
+            "value": "400201",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          }
+          ,
+          {
+            "name": "dialogue2",
+            "value": "100101",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "dialogue3",
+            "value": "100201",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "dialogue4",
+            "value": "200802",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "dialogue5",
+            "value": "200702",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "dialogue6",
+            "value": "200902",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "dialogue7",
+            "value": "400301",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "dialogue8",
+            "value": "300801",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "dialogue9",
+            "value": "300902",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "dialogue9",
+            "value": "300202",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"

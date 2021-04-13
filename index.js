@@ -283,7 +283,7 @@ app.post('/max',function(req,res){
   })
 //////////////////출금여부//////////////////
 app.post('/maxYn',function(req,res){
-  console.log(req)
+  console.log("라라라라")
     res.status(200).json( {
         "valid":"denial"
     })

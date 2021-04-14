@@ -116,6 +116,7 @@ app.post('/test',function(req,res){
 
 ////////////////출금가능여부//////////////////////
 app.post('/Yn',function(req,res){
+  console.log('출금가능여부테스트')
   res.status(200).json({
     "data":[{
       "variableName":"echo",

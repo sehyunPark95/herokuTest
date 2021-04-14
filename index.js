@@ -10,6 +10,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
 app.get('/',function(req,res){
+
+  fetch("https://295a19fdfdb9446da47c804360f4f8a3.apigw.fin-ntruss.com/read/v1/campaign?contactCenterId=54",{
+    method:'GET',
+    headers:{
+      'X-CLOVA-AICALL-API-KEY' : 'a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c'
+    }
+  }).then((response)=>console.log(response))
   res.sendFile(__dirname+'/log.html')
 })
 app.get('/log.css',function(req,res){
@@ -22,6 +29,8 @@ app.get('/find',function(req,res){
     console.log(docs);
  });
 });
+app
+
 app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;
   var name = "홍길동"

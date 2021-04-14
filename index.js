@@ -126,6 +126,10 @@ app.post('/max',function(req,res){
           {
             "variableName":"custNm",
             "value":"홍길동"
+          },
+          {
+            "variableName":"echo",
+            "value":"TRUE"
           }
         ],
         "userVariable": [

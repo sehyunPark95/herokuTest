@@ -10,13 +10,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
 app.get('/',function(req,res){
-
-  fetch("https://295a19fdfdb9446da47c804360f4f8a3.apigw.fin-ntruss.com/read/v1/campaign?contactCenterId=54",{
-    method:'GET',
-    headers:{
-      'X-CLOVA-AICALL-API-KEY' : 'a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c'
-    }
-  }).then((response)=>console.log(response))
   res.sendFile(__dirname+'/log.html')
 })
 app.get('/log.css',function(req,res){
@@ -29,7 +22,32 @@ app.get('/find',function(req,res){
     console.log(docs);
  });
 });
-app
+app.post('/call',function(req,res){
+  fetch('https://295a19fdfdb9446da47c804360f4f8a3.apigw.fin-ntruss.com/write/v1/campaign/target',{
+    method:'POST',
+    headers: {"X-CLOVA-AICALL-API-KEY" : "a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c"},
+    body: JSON.stringify({
+      "name": "apiTest7",
+      "description": "test22",
+      "targetNumbers": [
+          {
+              "number": "01092400783",
+              "key1": "123456",
+              "key2": "12"
+          },
+          {
+              "number": "01067399333"
+          }
+      ]
+  })
+  }).then((response)=>{
+    console.log(response)
+  }).then((data)=>{
+    console.log(data)
+  })
+
+  res.json({'test':'haha'})
+})
 
 app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;
@@ -570,7 +588,6 @@ mongoose.connect('mongodb+srv://sehyun:mindwareworks1!@cluster0.lvteo.mongodb.ne
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB connected...'))
 .catch(error => console.log(error))
-
 
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));

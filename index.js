@@ -114,8 +114,15 @@ app.post('/test',function(req,res){
   })
 })
 
-//////////////////////////////////////////////
-
+////////////////출금가능여부//////////////////////
+app.post('/Yn',function(req,res){
+  res.status(200).json({
+    "data":[{
+      "variableName":"echo",
+      "value":"true"
+    }]
+  })
+})
 ///////////////////납입최고//////////////////////////
 
 app.post('/max',function(req,res){

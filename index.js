@@ -126,6 +126,10 @@ app.post('/Yn',function(req,res){
 
 app.post('/max',function(req,res){
     const test2 = req.body.userInfo;
+    const tt = req.body;
+    console.log(tt)
+    console.log('------------------------')
+    console.log(test2)
     //console.log(test2)
     res.status(200).json( {
         "data": [

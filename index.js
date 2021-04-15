@@ -19,18 +19,32 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/',function(req,res){
   res.sendFile(__dirname+'/log.html')
 })
-const url = 'https://herokutest9595.herokuapp.com/ppp';
+const url = 'https://295a19fdfdb9446da47c804360f4f8a3.apigw.fin-ntruss.com/write/v1/campaign/target?contactCenterId=54';
+var data = {
+  "name": "apiTest15",
+  "description": "test",
+  "targetNumbers": [
+      {
+          "number": "01092400783",
+          "key1": "123456",
+          "key2": "12"
+      },
+      {
+          "number": "01067399333"
+      }
+  ]
+};
 
-app.post('/ppp',function(req,res){
-  res.json({'test':'success'})
-})
 app.post('/call',function(req,res){
 
   $.ajax({
     url:url,
     method:"POST",
-    data:JSON.stringify({"kkk":'qqqq'}),
-    contentType:"application/json",
+    beforeSend : function(xhr){
+      xhr.setRequestHeader("X-CLOVA-AICALL-API-KEY", "a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c");
+      xhr.setRequestHeader("Content-type","application/json");
+  },
+    data:JSON.stringify(data),
     dataType:"json"
   }).done(function(json){
     console.log(json)

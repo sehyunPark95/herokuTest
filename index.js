@@ -18,28 +18,29 @@ app.get('/log.css',function(req,res){
 })
 
 app.post('/call',function(req,res){
-  fetch('https://295a19fdfdb9446da47c804360f4f8a3.apigw.fin-ntruss.com/write/v1/campaign/target',{
+  var url = 'https://295a19fdfdb9446da47c804360f4f8a3.apigw.fin-ntruss.com/write/v1/campaign/target';
+  var data = {
+    "name": "apiTest7",
+    "description": "test22",
+    "targetNumbers": [
+        {
+            "number": "01092400783",
+            "key1": "123456",
+            "key2": "12"
+        },
+        {
+            "number": "01067399333"
+        }
+    ]
+};
+  fetch(url,{
     method:'POST',
-    headers: {"X-CLOVA-AICALL-API-KEY" : "a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c"},
-    body: JSON.stringify({
-      "name": "apiTest7",
-      "description": "test22",
-      "targetNumbers": [
-          {
-              "number": "01092400783",
-              "key1": "123456",
-              "key2": "12"
-          },
-          {
-              "number": "01067399333"
-          }
-      ]
-  })
-  }).then((response)=>{
-    console.log(response)
-  }).then((data)=>{
-    console.log(data)
-  })
+    headers: {"X-CLOVA-AICALL-API-KEY" : "a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c",
+    'Content-Type':'application/json'
+  },
+    body: JSON.stringify(data)
+  }).then(response=>console.log(response.json())
+  ).catch(error=>console.error('Error:',error))
 
   res.json({'test':'haha'})
 })

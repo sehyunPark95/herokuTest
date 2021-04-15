@@ -36,7 +36,7 @@ app.post('/call',function(req,res){
         }
     ]
 };
-  fetch('test123',{
+  fetch('	https://herokutest9595.herokuapp.com/test123',{
     method:'POST',
     /*headers: {"X-CLOVA-AICALL-API-KEY" : "a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c",
     'Content-Type':'application/json'

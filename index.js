@@ -16,7 +16,10 @@ app.get('/',function(req,res){
 app.get('/log.css',function(req,res){
   res.sendFile(__dirname+'/log.css')
 })
-
+app.post('/test123',function(req,res){
+  console.log('들어옴')
+  res.json({'test':'success'})
+})
 app.post('/call',function(req,res){
   var url = 'https://295a19fdfdb9446da47c804360f4f8a3.apigw.fin-ntruss.com/write/v1/campaign/target';
   var data = {
@@ -33,11 +36,11 @@ app.post('/call',function(req,res){
         }
     ]
 };
-  fetch(url,{
+  fetch('test123',{
     method:'POST',
-    headers: {"X-CLOVA-AICALL-API-KEY" : "a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c",
+    /*headers: {"X-CLOVA-AICALL-API-KEY" : "a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c",
     'Content-Type':'application/json'
-  },
+  },*/
     body: JSON.stringify(data)
   }).then(response=>console.log(response.json())
   ).catch(error=>console.error('Error:',error))

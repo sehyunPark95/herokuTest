@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const {Log} = require('./logs');
 var moment = require('moment');
 const fetch = require("node-fetch");
+const { response } = require('express');
 moment.locale('ko');
 /////커밋테스트
 app.use(bodyParser.urlencoded({extended: true}));
@@ -42,10 +43,12 @@ app.post('/call',function(req,res){
     'Content-Type':'application/json'
   },*/
     body: JSON.stringify(data)
-  }).then(response=>console.log(response.json())
+  }).then(response =>{
+    return console.log(response.json())
+  }
   ).catch(error=>console.error('Error:',error))
 
-  res.json({'test':'haha'})
+  res.json({'test':'haha2'})
 })
 
 app.post('/',function(req,res){

@@ -7,7 +7,8 @@ var moment = require('moment');
 const fetch = require("node-fetch");
 const { response } = require('express');
 moment.locale('ko');
-
+const { JSDOM } = require( "jsdom" );
+const { window } = new JSDOM( "" );
 const $ = require( "jquery" )( window );
 const request = require('request')
 var k = ''

@@ -4,8 +4,9 @@ var router = express.Router();
 const bodyParser = require('body-parser');
 const {Log} = require('./logs');
 var moment = require('moment');
+const fetch = require("node-fetch");
 moment.locale('ko');
-//커밋테스트
+/////커밋테스트
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
@@ -15,13 +16,7 @@ app.get('/',function(req,res){
 app.get('/log.css',function(req,res){
   res.sendFile(__dirname+'/log.css')
 })
-app.get('/find',function(req,res){
-  const collection = Log.collection('logs')
-  collection.find().toArray(function (err, docs) {
-    console.log('== Find ALL, toArray');
-    console.log(docs);
- });
-});
+
 app.post('/call',function(req,res){
   fetch('https://295a19fdfdb9446da47c804360f4f8a3.apigw.fin-ntruss.com/write/v1/campaign/target',{
     method:'POST',
@@ -375,17 +370,6 @@ app.post('/happy',function(req,res){
     console.log(req.body)
     console.log('---------------------')
     console.log(req.body.userInfo)
-    var log = new Log(
-      {name:"happy",userInfo:req.body.userInfo,userVariables:req.body.userInfo.userVariables,time:moment().format('YYYY-MM-DD HH:mm:ss')}
-    );
-      log.save(function(error,data){
-        if(error){
-          console.log(error)
-        }else{
-          console.log('saved!')
-        }
-      });
-
 
     res.status(200).json( {
       /*"message": test2*/
@@ -583,11 +567,6 @@ app.post('/happy3',function(req,res){
 
 /////////////////////////////////////
 
-const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://sehyun:mindwareworks1!@cluster0.lvteo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
-    useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
-}).then(() => console.log('MongoDB connected...'))
-.catch(error => console.log(error))
 
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));

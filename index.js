@@ -7,6 +7,11 @@ var moment = require('moment');
 const fetch = require("node-fetch");
 const { response } = require('express');
 moment.locale('ko');
+const { JSDOM } = require( "jsdom" );
+const { window } = new JSDOM( "" );
+const $ = require( "jquery" )( window );
+const request = require('request')
+var k = ''
 /////커밋테스트
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
@@ -14,42 +19,28 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/',function(req,res){
   res.sendFile(__dirname+'/log.html')
 })
-app.get('/log.css',function(req,res){
-  res.sendFile(__dirname+'/log.css')
-})
-app.post('/test123',function(req,res){
-  console.log('들어옴')
+const url = 'https://herokutest9595.herokuapp.com/ppp';
+
+app.post('/ppp',function(req,res){
   res.json({'test':'success'})
 })
 app.post('/call',function(req,res){
-  var url = 'https://295a19fdfdb9446da47c804360f4f8a3.apigw.fin-ntruss.com/write/v1/campaign/target';
-  var data = {
-    "name": "apiTest7",
-    "description": "test22",
-    "targetNumbers": [
-        {
-            "number": "01092400783",
-            "key1": "123456",
-            "key2": "12"
-        },
-        {
-            "number": "01067399333"
-        }
-    ]
-};
-  fetch('	https://herokutest9595.herokuapp.com/test123',{
-    method:'POST',
-    /*headers: {"X-CLOVA-AICALL-API-KEY" : "a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c",
-    'Content-Type':'application/json'
-  },*/
-    body: JSON.stringify(data)
-  }).then(response =>{
-    return console.log(response.json())
-  }
-  ).catch(error=>console.error('Error:',error))
 
-  res.json({'test':'haha2'})
+  $.ajax({
+    url:url,
+    method:"POST",
+    data:JSON.stringify({"kkk":'qqqq'}),
+    contentType:"application/json",
+    dataType:"json"
+  }).done(function(json){
+    console.log(json)
+    k= json;
+  })
+
+  res.json(k)
 })
+
+
 
 app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;
@@ -329,43 +320,6 @@ app.post('/maxYn',function(req,res){
         "valid":"pass"
     })
   })
-///////////////////해피 커스텀////////////////////
-
-app.post('/happy2',function(req,res){
- 
-  let nextCode = "";
-  var now = req.body.userVariables.now.value;
-  console.log(now)
-  if(now == "null"){
-    nextCode = "400201"
-  }else if(now == "400201"){
-    nextCode = "100101"
-  }else if(now == "100101"){
-    nextCode = "100201"
-  }else if(now == "100201"){
-    nextCode = "200802"
-  }else if(now == "200802"){
-    nextCode = "200702"
-  }else if(now == "200702"){
-    nextCode = "200902"
-  }else if(now == "200902"){
-    nextCode = "400301"
-  }else if(now == "400301"){
-    nextCode = "300801"
-  }else if(now == "300801"){
-    nextCode = "300902"
-  }else if(now == "300902"){
-    nextCode = "300202"
-  }
-  
-    res.status(200).json({
-      "valid":nextCode
-  })
-  
-  })
-
-////////////////////////////////////////////
-
 
 ////////////////해피해피////////////////////
 
@@ -533,47 +487,6 @@ app.post('/happy',function(req,res){
   })
 
 //////////////////////////////////////
-
-//////////////////해피테스트//////////////////
-
-app.post('/happy3',function(req,res){
-
-  let nextCode = "";
-  var now = req.body.userInfo.userVariables.now.value;
-  console.log(req.body.userInfo)
-  if(now == "null"){
-    nextCode = "0001"
-  }else if(now =="0001"){
-    nextCode = "0002"
-  }
-  res.status(200).json( {
-    /*"message": test2*/
-      "data": [
-        {
-          "variableName": "custNm",
-          "value": "박세현"
-        }
-      ],
-      "userVariable": [
-        {
-          "name": "next",
-          "value": nextCode,
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },{
-          "name": "custNm",
-          "value": "박세현",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        }
-      ]
-  })
-})
-
-/////////////////////////////////////
-
 
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));

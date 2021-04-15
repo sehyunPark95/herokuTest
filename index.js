@@ -19,35 +19,6 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/',function(req,res){
   res.sendFile(__dirname+'/log.html')
 })
-const url = 'https://295a19fdfdb9446da47c804360f4f8a3.apigw.fin-ntruss.com/write/v1/campaign/target?contactCenterId=54';
-var data = {
-  "name": "apiTest20",
-  "description": "test",
-  "targetNumbers": [
-      {
-          "number": "01092400783",
-          "key1": "12342356",
-          "key2": "1"
-      }
-  ]
-};
-async function test(){
-  fetch(url,{
-    method:"POST",
-    headers:{
-      "X-CLOVA-AICALL-API-KEY":"a13f14f7-43d7-4a1d-9c9b-b3bf4eec048c"
-    },
-    body:JSON.stringify(data),
-  }).then((response)=>response.json())
-  .then((data) => console.log(data))
-}
-app.post('/call',function(req,res){
-
-  test()
-  res.json({"test":"success"})
-})
-
-
 
 app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;

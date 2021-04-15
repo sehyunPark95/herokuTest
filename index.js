@@ -31,9 +31,7 @@ var data = {
       }
   ]
 };
-
-app.post('/call',function(req,res){
-
+async function test(){
   fetch(url,{
     method:"POST",
     headers:{
@@ -42,7 +40,10 @@ app.post('/call',function(req,res){
     body:JSON.stringify(data),
   }).then((response)=>response.json())
   .then((data) => console.log(data))
+}
+app.post('/call',function(req,res){
 
+  test()
   res.json({"test":"success"})
 })
 

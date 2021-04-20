@@ -144,6 +144,49 @@ app.post('/test',function(req,res){
   })
 })
 
+/////////퇴직연금////////////
+
+app.post('/test22',function(req,res){
+  res.status(200).json( {
+    /*"message": test2*/
+      "data": [
+        {
+          "variableName": "custNm",
+          "value": "김생명"
+        },{
+          "variableName": "callDeviceDiv",
+          "value": "H"
+        },{
+          "variableName": "oo",
+          "value": "N"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "custNm",
+          "value": "김생명",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "callDeviceDiv",
+          "value": "H",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "oo",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+  })
+})
+
 ////////////////출금가능여부//////////////////////
 app.post('/Yn',function(req,res){
   console.log('출금가능여부테스트')

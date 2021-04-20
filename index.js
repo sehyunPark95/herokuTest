@@ -19,7 +19,39 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/',function(req,res){
   res.sendFile(__dirname+'/log.html')
 })
-
+/////////핸드폰인증/////////
+app.post('/hp',function(req,res){
+  res.status(200).json({
+    "data":[{
+      "variableName":"custNm",
+      "value":"제니"
+    }],
+    "userVariable":[
+      {
+      "name": "custHp",
+      "value": "01092400783",
+      "type": "TEXT",
+      "action": "EQ",
+      "valueType": "TEXT"
+    },
+    {
+      "name": "authRslt",
+      "value": "1234",
+      "type": "TEXT",
+      "action": "EQ",
+      "valueType": "TEXT"
+    },
+    {
+      "name": "authConfirm",
+      "value": "Y",
+      "type": "TEXT",
+      "action": "EQ",
+      "valueType": "TEXT"
+    }
+  ]
+  })
+})
+//////////////
 app.post('/',function(req,res){
   const test = JSON.parse(req.body.userInfo.userVariables.cicRequest.value).session.callInfo.callee;
   var name = "홍길동"

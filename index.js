@@ -157,8 +157,8 @@ app.post('/test22',function(req,res){
           "variableName": "callDeviceDiv",
           "value": "H"
         },{
-          "variableName": "oo",
-          "value": "N"
+          "variableName": "rtrPensionDiv",
+          "value": "DC"
         }
       ],
       "userVariable": [

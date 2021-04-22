@@ -186,7 +186,7 @@ app.post('/test22',function(req,res){
         },
         {
           "name": "callDeviceDiv",
-          "value": "H",
+          "value": "U",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

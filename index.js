@@ -377,7 +377,20 @@ app.post('/maxYn',function(req,res){
         "valid":"pass"
     })
   })
-
+//////////////////통화처리결과///////////////////////
+app.post('/hpResult',function(req,res){
+  console.log('통화처리결과')
+  console.log(req.body.userInfo.userVariables)
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName":"rslt",
+          "value":"Y"
+        }
+      ]
+    })
+  })
+////////////////////////////////////////
 ////////////////해피해피////////////////////
 
 app.post('/happy',function(req,res){

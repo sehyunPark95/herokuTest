@@ -159,6 +159,21 @@ app.post('/test22',function(req,res){
         },{
           "variableName": "rtrPensionDiv",
           "value": "DC"
+        },{
+          "variableName": "cntrNum",
+          "value": "44557722"
+        },{
+          "variableName": "payRcvYn",
+          "value": "Y"
+        },{
+          "variableName": "retireMultiYn",
+          "value": "Y"
+        },{
+          "variableName": "dcJoinYn",
+          "value": "Y"
+        },{
+          "variableName": "ss",
+          "value": "DC"
         }
       ],
       "userVariable": [
@@ -177,7 +192,42 @@ app.post('/test22',function(req,res){
           "valueType": "TEXT"
         },
         {
-          "name": "oo",
+          "name": "rtrPensionDiv",
+          "value": "DC",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "cntrNum",
+          "value": "44557722",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "payRcvYn",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "retireMultiYn",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "dcJoinYn",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "ss",
           "value": "N",
           "type": "TEXT",
           "action": "EQ",

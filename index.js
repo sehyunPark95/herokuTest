@@ -164,7 +164,7 @@ app.post('/test22',function(req,res){
           "value": "44557722"
         },{
           "variableName": "payRcvYn",
-          "value": "Y"
+          "value": "N"
         },{
           "variableName": "retireMultiYn",
           "value": "Y"
@@ -207,7 +207,7 @@ app.post('/test22',function(req,res){
         },
         {
           "name": "payRcvYn",
-          "value": "Y",
+          "value": "N",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

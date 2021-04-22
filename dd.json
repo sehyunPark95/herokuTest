@@ -1,0 +1,113 @@
+{
+    "sessionOpenedTime": "2020-10-21T05:23:18.575558Z",
+    "sessionId": "0db6d837-e4b3-4c31-a526-1257395c07d8",
+    "caller": "07074208461",
+    "callee": "01037963940",
+    "sessionClosedTime": "2020-10-21T14:25:50.253365+09:00",
+    "sessionProfile": {
+        "profileName": "16-ivr-camp",
+        "input": {
+            "samplingRate": 8000
+        },
+        "extension": {
+            "serverUri": "http://chatbot-kaa.fin-ncloud.com:8086/chatbot/clova/v1/ccai",
+            "id": "dcx-c",
+            "activated": false
+        },
+        "synthesizer": {
+            "volume": "0",
+            "serverUri": "http://p-voice.ncloud.com/tts/makeTTS",
+            "nVoiceServiceId": "ncp_ccai",
+            "speaker": "nara",
+            "alpha": "0",
+            "samplingRate": 8000,
+            "pitch": "0",
+            "type": "nvoice",
+            "nVoiceDefaultVoiceType": "",
+            "speed": "0",
+            "activated": true
+        },
+        "profileId": "d4181972-2aa0-4671-8b81-188b840c8bd3",
+        "recognizer": {
+            "serverUri": "tcp://private-csrapi.ncloud.com:10211",
+            "nestServerUri": "http://private-csr-nest.naver.com:10811/nest/v1/stt",
+            "samplingRate": 16000,
+            "type": "nspeech",
+            "lang": "ko",
+            "googleLang": "",
+            "nestDomain": "telephone",
+            "nSpeechServiceCode": "OpenAPI",
+            "nestServiceCode": "clova_ccai",
+            "activated": true
+        },
+        "userId": "2606544_16"
+    },
+    "customProperties": {
+        "chatbot": {
+            "userVariables": {
+                "cicRequest": {
+                    "type": "JSON",
+                    "value": {
+                        "version": "1.0",
+                        "session": {
+                            "callInfo": {
+                                "callee": "01037963940",
+                                "caller": "07074208461",
+                                "id": "0db6d837-e4b3-4c31-a526-1257395c07d8",
+                                "meta": {}
+                            },
+                            "new": false,
+                            "sessionAttributes": {},
+                            "sessionId": "49535a80-0e6d-48de-a6ab-3d780a12fd13",
+                            "user": {
+                                "userId": "2606544_16"
+                            }
+                        },
+                        "context": {
+                            "System": {
+                                "application": {
+                                    "applicationId": "dcx-c"
+                                },
+                                "device": {
+                                    "deviceId": "0db6d837-e4b3-4c31-a526-1257395c07d8"
+                                },
+                                "user": {
+                                    "userId": "2606544_16"
+                                }
+                            }
+                        },
+                        "request": {
+                            "type": "IntentRequest",
+                            "requestId": "4a89be76-3cb4-47c8-96df-b93b1175abbe",
+                            "dialogRequestId": "1c1b50cf-395e-4af2-bf89-aa1b5d17cb7b",
+                            "timestamp": "2020-10-21T05:25:37Z",
+                            "locale": "ko-KR",
+                            "extensionId": "dcx-c",
+                            "intent": {
+                                "intent": "ClovaChatbot",
+                                "name": "ClovaChatbot",
+                                "slots": {
+                                    "q": {
+                                        "name": "q",
+                                        "value": "될 거 같은데"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "platform": {
+            "transfer": {
+                "transferRequested": false
+            },
+            "hangUp": {
+                "requestedTime": "2020-10-21T14:25:50.253365+09:00",
+                "executor": "USER"
+            }
+        }
+    },
+    "sessionDurationInMilliseconds": 151887,
+    "sessionProperties": {}
+}

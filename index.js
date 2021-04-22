@@ -428,7 +428,7 @@ app.post('/maxYn',function(req,res){
     })
   })
 //////////////////통화처리결과///////////////////////
-app.post('/hpResult',function(req,res){
+app.post('/callResult',function(req,res){
   console.log('통화처리결과')
   console.log(req.body.userInfo.userVariables)
     res.status(200).json( {

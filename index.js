@@ -155,7 +155,7 @@ app.post('/test22',function(req,res){
           "value": "김생명"
         },{
           "variableName": "callDeviceDiv",
-          "value": "L"
+          "value": "U"
         },{
           "variableName": "rtrPensionDiv",
           "value": "DC"
@@ -186,7 +186,7 @@ app.post('/test22',function(req,res){
         },
         {
           "name": "callDeviceDiv",
-          "value": "L",
+          "value": "U",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

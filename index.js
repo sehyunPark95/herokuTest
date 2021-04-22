@@ -172,8 +172,8 @@ app.post('/test22',function(req,res){
           "variableName": "dcJoinYn",
           "value": "Y"
         },{
-          "variableName": "ss",
-          "value": "DC"
+          "variableName": "custHp",
+          "value": "01012345678"
         }
       ],
       "userVariable": [
@@ -227,8 +227,8 @@ app.post('/test22',function(req,res){
           "valueType": "TEXT"
         },
         {
-          "name": "ss",
-          "value": "N",
+          "name": "custHp",
+          "value": "01012345678",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -158,13 +158,13 @@ app.post('/test22',function(req,res){
           "value": "U"
         },{
           "variableName": "rtrPensionDiv",
-          "value": "DB"
+          "value": "DC"
         },{
           "variableName": "cntrNum",
           "value": "44557722"
         },{
           "variableName": "payRcvYn",
-          "value": "N"
+          "value": "Y"
         },{
           "variableName": "retireMultiYn",
           "value": "Y"
@@ -193,7 +193,7 @@ app.post('/test22',function(req,res){
         },
         {
           "name": "rtrPensionDiv",
-          "value": "DB",
+          "value": "DC",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -207,7 +207,7 @@ app.post('/test22',function(req,res){
         },
         {
           "name": "payRcvYn",
-          "value": "N",
+          "value": "Y",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

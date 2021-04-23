@@ -161,7 +161,7 @@ app.post('/test22',function(req,res){
           "value": "DC"
         },{
           "variableName": "cntrNum",
-          "value": "44557722"
+          "value": ""
         },{
           "variableName": "payRcvYn",
           "value": "Y"
@@ -200,7 +200,7 @@ app.post('/test22',function(req,res){
         },
         {
           "name": "cntrNum",
-          "value": "44557722",
+          "value": "",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

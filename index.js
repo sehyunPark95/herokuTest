@@ -207,7 +207,7 @@ app.post('/test22',function(req,res){
         },
         {
           "name": "payRcvYn",
-          "value": "",
+          "value": "Y",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

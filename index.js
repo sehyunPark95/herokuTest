@@ -158,7 +158,7 @@ app.post('/test22',function(req,res){
           "value": "U"
         },{
           "variableName": "rtrPensionDiv",
-          "value": "DC"
+          "value": "DB"
         },{
           "variableName": "cntrNum",
           "value": "44557722"
@@ -193,7 +193,7 @@ app.post('/test22',function(req,res){
         },
         {
           "name": "rtrPensionDiv",
-          "value": "DC",
+          "value": "DB",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -144,9 +144,9 @@ app.post('/test',function(req,res){
   })
 })
 
-/////////퇴직연금////////////
+/////////퇴직연금 고객확인정보////////////
 
-app.post('/test22',function(req,res){
+app.post('/retireCustConfirm',function(req,res){
   res.status(200).json( {
     /*"message": test2*/
       "data": [
@@ -229,6 +229,225 @@ app.post('/test22',function(req,res){
         {
           "name": "custHp",
           "value": "01012345678",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+  })
+})
+
+/////////고객별 퇴직연금 정보////////////
+
+app.post('/custRtrInfo',function(req,res){
+  res.status(200).json( {
+    /*"message": test2*/
+      "data": [
+        {
+          "variableName": "custNm",
+          "value": "김생명"
+        },{
+          "variableName": "rtrPensionDiv",
+          "value": "DC"
+        },{
+          "variableName": "rtrPayRegDt",
+          "value": "2021년2월28일"
+        },{
+          "variableName": "rtrPaySchDt",
+          "value": "2021년3월31일"
+        },{
+          "variableName": "taxRtrPayAmt",
+          "value": "35,644,400"
+        },{
+          "variableName": "rtrPayBalAmt",
+          "value": "35,644,400"
+        },{
+          "variableName": "cumRate",
+          "value": "12.34%"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "custNm",
+          "value": "김생명",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "rtrPensionDiv",
+          "value": "DC",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "rtrPayRegDt",
+          "value": "2021년2월28일",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "rtrPaySchDt",
+          "value": "2021년3월31일",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "taxRtrPayAmt",
+          "value": "35,644,400",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "rtrPayBalAmt",
+          "value": "35,644,400",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "cumRate",
+          "value": "12.34%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+  })
+})
+
+/////////퇴직연금 상품 금리정보////////////
+
+app.post('/custRtrpensionDoc',function(req,res){
+  res.status(200).json( {
+    /*"message": test2*/
+      "data": [
+        {
+          "variableName": "prodRate1",
+          "value": "1.22%"
+        },{
+          "variableName": "prodRate2",
+          "value": "2.22%"
+        },{
+          "variableName": "prodRate3",
+          "value": "3.22%"
+        },{
+          "variableName": "prodRate4",
+          "value": "5.22%"
+        },{
+          "variableName": "prodRate5",
+          "value": "1.67%"
+        },{
+          "variableName": "prodRate6",
+          "value": "2.67%"
+        },{
+          "variableName": "prodRate7",
+          "value": "3.67%"
+        },{
+          "variableName": "prodRate8",
+          "value": "4.67%"
+        },{
+          "variableName": "prodRate9",
+          "value": "5.67%"
+        },{
+          "variableName": "prodRate10",
+          "value": "6.67%"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "prodRate1",
+          "value": "1.22%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "prodRate2",
+          "value": "2.22%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "prodRate3",
+          "value": "3.22%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "prodRate4",
+          "value": "5.22%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "prodRate5",
+          "value": "1.67%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "prodRate6",
+          "value": "2.67%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "prodRate7",
+          "value": "3.67%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "prodRate8",
+          "value": "4.67%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "prodRate9",
+          "value": "5.67%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "prodRate10",
+          "value": "6.67%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+  })
+})
+
+/////////퇴직연금 처리상태////////////
+
+app.post('/custRtrSend',function(req,res){
+  res.status(200).json( {
+    /*"message": test2*/
+      "data": [
+        {
+          "variableName": "procYn",
+          "value": "Y"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "procYn",
+          "value": "Y",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

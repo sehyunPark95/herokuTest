@@ -21,6 +21,7 @@ app.get('/',function(req,res){
 })
 /////////핸드폰인증/////////
 app.post('/hp',function(req,res){
+  console.log(req.body.userInfo.userVariables)
   res.status(200).json({
     "data":[{
       "variableName":"custNm",

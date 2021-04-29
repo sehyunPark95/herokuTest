@@ -22,8 +22,6 @@ app.get('/',function(req,res){
 /////////////통화처리결과//////////////
 app.post('/Rslt',function(req,res){
   console.log(req.body.userInfo.userVariables)
-  console.log('--------------------------')
-  console.log(req.body.userInfo.query)
   res.status(200).json({
     "data":[{
       "variableName":"custNm",
@@ -169,7 +167,7 @@ app.post('/retireCustConfirm',function(req,res){
           "value": "김생명"
         },{
           "variableName": "callDeviceDiv",
-          "value": "H"
+          "value": "U"
         },{
           "variableName": "rtrPensionDiv",
           "value": "DC"
@@ -200,7 +198,7 @@ app.post('/retireCustConfirm',function(req,res){
         },
         {
           "name": "callDeviceDiv",
-          "value": "H",
+          "value": "U",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -22,6 +22,8 @@ app.get('/',function(req,res){
 /////////////통화처리결과//////////////
 app.post('/Rslt',function(req,res){
   console.log(req.body.userInfo.userVariables)
+  console.log('--------------------------')
+  console.log(req.body.userInfo.query)
   res.status(200).json({
     "data":[{
       "variableName":"custNm",

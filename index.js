@@ -19,6 +19,17 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/',function(req,res){
   res.sendFile(__dirname+'/log.html')
 })
+/////////////통화처리결과//////////////
+app.post('/Rslt',function(req,res){
+  console.log(req.body.userInfo.userVariables)
+  res.status(200).json({
+    "data":[{
+      "variableName":"custNm",
+      "value":"test"
+    }]
+  })
+})
+/////////////////////////////////////
 /////////핸드폰인증/////////
 app.post('/hp',function(req,res){
   console.log(req.body.userInfo.userVariables)

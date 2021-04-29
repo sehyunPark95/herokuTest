@@ -170,7 +170,7 @@ app.post('/retireCustConfirm',function(req,res){
           "value": "U"
         },{
           "variableName": "rtrPensionDiv",
-          "value": "DC"
+          "value": ""
         },{
           "variableName": "cntrNum",
           "value": ""
@@ -182,7 +182,7 @@ app.post('/retireCustConfirm',function(req,res){
           "value": "Y"
         },{
           "variableName": "dcJoinYn",
-          "value": "Y"
+          "value": "N"
         },{
           "variableName": "custHp",
           "value": "01012345678"
@@ -205,7 +205,7 @@ app.post('/retireCustConfirm',function(req,res){
         },
         {
           "name": "rtrPensionDiv",
-          "value": "DC",
+          "value": "",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -233,7 +233,7 @@ app.post('/retireCustConfirm',function(req,res){
         },
         {
           "name": "dcJoinYn",
-          "value": "Y",
+          "value": "N",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

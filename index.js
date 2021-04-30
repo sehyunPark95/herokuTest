@@ -182,7 +182,10 @@ app.post('/retireCustConfirm',function(req,res){
           "value": "Y"
         },{
           "variableName": "dcJoinYn",
-          "value": "N"
+          "value": "Y"
+        },{
+          "variableName": "irpJoinYn",
+          "value": "Y"
         },{
           "variableName": "custHp",
           "value": "01012345678"
@@ -233,7 +236,14 @@ app.post('/retireCustConfirm',function(req,res){
         },
         {
           "name": "dcJoinYn",
-          "value": "N",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "irpJoinYn",
+          "value": "Y",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -661,9 +661,9 @@ app.post('/maxYn',function(req,res){
 //////////////////통화처리결과///////////////////////
 app.post('/callResult',function(req,res){
   console.log('통화처리결과')
- // console.log(req.body.userInfo.userVariables)
+  console.log(req.body.userInfo.userVariables)
   console.log('----------------')
-  console.log(req.body)
+  
     res.status(200).json( {
       "data": [
         {

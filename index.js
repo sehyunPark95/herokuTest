@@ -522,7 +522,7 @@ app.post('/maxYn',function(req,res){
     }],
     "userVariable": [
       {
-        "name": "extDlyYn",
+        "name": "exDlyYn",
         "value": "Y",
         "type": "TEXT",
         "action": "EQ",

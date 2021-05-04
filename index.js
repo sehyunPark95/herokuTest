@@ -939,7 +939,8 @@ app.post('/max2',function(req,res){
 //////////////////통화처리결과///////////////////////
 app.post('/callResult',function(req,res){
   console.log('통화처리결과')
-  console.log(req.body.userInfo.userVariables)
+  console.log(req.body.userInfo.userVariables.taskDtlDivNm.value)
+  console.log(req.body.userInfo.userVariables.taskDtlDiv.value)
   console.log('----------------')
   
     res.status(200).json( {

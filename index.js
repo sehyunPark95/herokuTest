@@ -477,19 +477,212 @@ app.post('/custRtrSend',function(req,res){
       ]
   })
 })
-
+///////////////고객정보확인///////////////////
+app.post('/custConfirm',function(req,res){
+  res.status(200).json( {
+    /*"message": test2*/
+      "data": [
+        {
+          "variableName": "custNm",
+          "value": "박세현"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "custNm",
+          "value": "박세현",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "birthYmd",
+          "value": "951005",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+  })
+})
 ////////////////출금가능여부//////////////////////
-app.post('/Yn',function(req,res){
-  console.log('출금가능여부테스트')
+app.post('/maxYn',function(req,res){
+  console.log('출금가능여부')
   res.status(200).json({
     "data":[{
       "variableName":"echo",
       "value":"false"
-    }]
+    }],
+    "userVariable": [
+      {
+        "name": "extDlyYn",
+        "value": "Y",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      }
+    ]
+    
+  })
+})
+///////////////////연장유예취소//////////////////////////
+app.post('/cancel',function(req,res){
+  console.log('연장유예승인취소')
+  res.status(200).json({
+    "data":[{
+      "variableName":"echo",
+      "value":"false"
+    }],
+    "userVariable": [
+      {
+        "name": "lowExtendCancYn",
+        "value": "Y",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      }
+    ]
+  })
+})
+///////////////////계좌조회//////////////////////////
+app.post('/search',function(req,res){
+  console.log('계좌조회')
+  res.status(200).json({
+    "data":[{
+      "variableName":"echo",
+      "value":"false"
+    }],"userVariable": [
+      {
+        "name": "custNm",
+        "value": "박세현",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "custNo",
+        "value": "677877977",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "acntCnt",
+        "value": "3",
+        "type": "NUMBER",
+        "action": "EQ",
+        "valueType": "NUMBER"
+      },
+      {
+        "name": "bankCd1",
+        "value": "001",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "bankCd2",
+        "value": "002",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "bankCd3",
+        "value": "003",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "bankCd4",
+        "value": "004",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "bankCd5",
+        "value": "005",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "bankNm1",
+        "value": "국민은행",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "bankNm2",
+        "value": "우리은행",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "bankNm3",
+        "value": "카카오뱅크",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "bankNm4",
+        "value": "신한은행",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "bankNm5",
+        "value": "농협은행",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "acntNo1",
+        "value": "1709930987",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "acntNo2",
+        "value": "2709930987",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "acntNo3",
+        "value": "3709930987",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "acntNo4",
+        "value": "4709930987",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "acntNo5",
+        "value": "5709930987",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      }
+      
+    ]
   })
 })
 ///////////////////납입최고//////////////////////////
-
 app.post('/max',function(req,res){
     const test2 = req.body.userInfo;
     const tt = req.body;
@@ -661,13 +854,88 @@ app.post('/max',function(req,res){
         ]
     })
   })
-//////////////////출금여부//////////////////
-app.post('/maxYn',function(req,res){
-  console.log("라라라라")
-    res.status(200).json( {
-        "valid":"pass"
-    })
+//////////////////납입최고2//////////////////
+app.post('/max2',function(req,res){
+  console.log('납입최고안내2')
+  res.status(200).json({
+    "data":[{
+      "variableName":"echo",
+      "value":"false"
+    }],
+    "userVariable": [
+      {
+        "name": "cntrCnt",
+        "value": "2",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "insuNm",
+        "value": "34445568",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "shrtProdNm",
+        "value": "실속하나로암보험",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "insuLoanYn",
+        "value": "Y",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "insuLoanSum",
+        "value": "560000",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "insuLoanInts",
+        "value": "350000",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "insuLoanTot",
+        "value": "910000",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "dbDiv",
+        "value": "D",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "payDtm",
+        "value": "2021년4월",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      },
+      {
+        "name": "payDt",
+        "value": "2021년11월29일",
+        "type": "TEXT",
+        "action": "EQ",
+        "valueType": "TEXT"
+      }
+    ]
   })
+})
 //////////////////통화처리결과///////////////////////
 app.post('/callResult',function(req,res){
   console.log('통화처리결과')

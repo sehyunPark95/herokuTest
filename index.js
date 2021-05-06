@@ -1126,6 +1126,22 @@ app.post('/happy',function(req,res){
     })
   })
 
+/////////////////퇴직연금 DC_PDF 발송//////////////////////
+app.post('/urlpdf',function(req,res){
+  console.log('-----------퇴직연금 DC_PDF 발송---------')
+  console.log(req.body.userInfo.query)
+  console.log('----------------')
+  
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName":"taskDtlDiv",
+          "value":"RA25"
+        }
+      ]
+    })
+  })
+//////////////////////////////////////////////////////
 //////////////////////////////////////
 
 app.listen(app.get('port'), function () {

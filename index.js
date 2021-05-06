@@ -1135,8 +1135,12 @@ app.post('/urlpdf',function(req,res){
     res.status(200).json( {
       "data": [
         {
-          "variableName":"taskDtlDiv",
-          "value":"RA25"
+          "variableName" : "taskDtlDiv",
+          "value" : "RA26"
+        },
+        {
+          "variableName" : "taskDtlDiv",
+          "value": "RA27"
         }
       ]
     })

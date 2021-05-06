@@ -1127,7 +1127,7 @@ app.post('/happy',function(req,res){
   })
 
 /////////////////퇴직연금 DC_PDF 발송//////////////////////
-app.post('/urlpdf',function(req,res){
+app.post('/DC_pdf',function(req,res){
   console.log('-----------퇴직연금 DC_PDF 발송---------')
   console.log(req.body.userInfo.query)
   console.log('----------------')
@@ -1137,15 +1137,27 @@ app.post('/urlpdf',function(req,res){
         {
           "variableName" : "taskDtlDiv",
           "value" : "RA26"
-        },
-        {
-          "variableName" : "taskDtlDiv",
-          "value": "RA27"
         }
       ]
     })
   })
 //////////////////////////////////////////////////////
+
+////////////////퇴직연금 IRP_PDF 발송//////////////////
+app.post('/IRP_pdf',function(req,res){
+  console.log('-----------퇴직연금 IRP_PDF 발송---------')
+  console.log(req.body.userInfo.query)
+  console.log('----------------')
+  
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "taskDtlDiv",
+          "value" : "RA27"
+        }
+      ]
+    })
+  })
 //////////////////////////////////////
 
 app.listen(app.get('port'), function () {

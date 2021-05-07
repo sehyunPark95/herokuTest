@@ -519,7 +519,7 @@ app.post('/maxYn',function(req,res){
   res.status(200).json({
     "data":[{
       "variableName":"echo",
-      "value":"false"
+      "value":"echo"
     }],
     "userVariable": [
       {
@@ -1130,13 +1130,6 @@ app.post('/happy',function(req,res){
 
 ///////////////에러테스트///////////////////////
 app.post('/error',function(req,res){
-  console.log(req.body)
-  console.log('-------------------------')
-  console.log('-------------------------')
-  console.log(req.body.userInfo)
-  console.log('-------------------------')
-  console.log('-------------------------')
-  console.log(req.body.userInfo.userVariables)
   /*setTimeout(function(){
     res.status(400).json({
       "error":"error"

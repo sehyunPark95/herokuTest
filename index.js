@@ -1171,7 +1171,7 @@ app.post('/IRP_pdf',function(req,res){
       ]
     })
   })
-//////////////////////////////////////
+//////////////////////////////////////////////////////
 
 ////////////////퇴직연금고객///////////////////////
 app.post('/retiredCustInfo',function(req,res){
@@ -1300,7 +1300,7 @@ app.post('/DC_move',function(req,res){
     })
   })
 app.post('/IRP_move',function(req,res){
-  console.log('-----------퇴직연금 DC_계약이전---------')
+  console.log('-----------퇴직연금 IRP_계약이전---------')
   console.log(req.body.userInfo.query)
   console.log('----------------')
   
@@ -1313,7 +1313,8 @@ app.post('/IRP_move',function(req,res){
       ]
     })
   })
-///////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+///////////////////////고객정보 변경 ///////////////////////////
 app.post('/custInfoChage',function(req,res){
   console.log('-----------퇴직연금 고객정보 변경---------')
   console.log(req.body.userInfo.query)
@@ -1328,7 +1329,7 @@ app.post('/custInfoChage',function(req,res){
       ]
     })
   })
-
+///////////////////////////////////////////////////////////////
 
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));

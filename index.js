@@ -515,6 +515,7 @@ app.post('/custConfirm',function(req,res){
 ////////////////출금가능여부//////////////////////
 app.post('/maxYn',function(req,res){
   console.log('출금가능여부')
+  console.log(req.body.userInfo)
   res.status(200).json({
     "data":[{
       "variableName":"echo",
@@ -1126,8 +1127,13 @@ app.post('/happy',function(req,res){
     })
   })
 
-//////////////////////////////////////
-
+///////////////에러테스트///////////////////////
+app.post('/error',function(req,res){
+  res.status(400).json({
+    "error":"error"
+  })
+})
+////////////////////////////
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));
 });

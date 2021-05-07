@@ -1281,7 +1281,36 @@ app.post('/retiredCustInfo',function(req,res){
   })
 })
 /////////////////////////////////////////////////
-
+/////////////////퇴직연금계약이전////////////////
+app.post('/DC_move',function(req,res){
+  console.log('-----------퇴직연금 DC_계약이전---------')
+  console.log(req.body.userInfo.query)
+  console.log('----------------')
+  
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "taskDtlDiv",
+          "value" : "RA43"
+        }
+      ]
+    })
+  })
+app.post('/IRP_move',function(req,res){
+  console.log('-----------퇴직연금 DC_계약이전---------')
+  console.log(req.body.userInfo.query)
+  console.log('----------------')
+  
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "taskDtlDiv",
+          "value" : "RA46"
+        }
+      ]
+    })
+  })
+///////////////////////////////////////////////
 
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));

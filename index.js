@@ -1130,9 +1130,10 @@ app.post('/happy',function(req,res){
 
 ///////////////에러테스트///////////////////////
 app.post('/error',function(req,res){
-  res.status(400).json({
+  setTimeout(res.status(400).json({
     "error":"error"
-  })
+  }),4000)
+  
 })
 ////////////////////////////
 

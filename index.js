@@ -1134,11 +1134,8 @@ app.post('/error',function(req,res){
     res.status(400).json({
       "error":"error"
     })
-
 },3000)*/
-  res.status(200).json({
-      
-    })
+  res.json(null)
 })
 ////////////////////////////
 

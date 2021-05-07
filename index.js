@@ -1127,6 +1127,7 @@ app.post('/happy',function(req,res){
     })
   })
 
+<<<<<<< HEAD
 ///////////////에러테스트///////////////////////
 app.post('/error',function(req,res){
   res.status(400).json({
@@ -1134,6 +1135,144 @@ app.post('/error',function(req,res){
   })
 })
 ////////////////////////////
+=======
+/////////////////퇴직연금 DC_PDF 발송//////////////////////
+app.post('/DC_pdf',function(req,res){
+  console.log('-----------퇴직연금 DC_PDF 발송---------')
+  console.log(req.body.userInfo.query)
+  console.log('----------------')
+  
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "taskDtlDiv",
+          "value" : "RA26"
+        }
+      ]
+    })
+  })
+//////////////////////////////////////////////////////
+
+////////////////퇴직연금 IRP_PDF 발송//////////////////
+app.post('/IRP_pdf',function(req,res){
+  console.log('-----------퇴직연금 IRP_PDF 발송---------')
+  console.log(req.body.userInfo.query)
+  console.log('----------------')
+  
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "taskDtlDiv",
+          "value" : "RA27"
+        }
+      ]
+    })
+  })
+//////////////////////////////////////
+
+////////////////퇴직연금고객///////////////////////
+app.post('/retiredCustInfo',function(req,res){
+  res.status(200).json( {
+      "data": [
+        {
+          "variableName": "custNm",
+          "value": "김생명"
+        },{
+          "variableName": "callDeviceDiv",
+          "value": "U"
+        },{
+          "variableName": "rtrPensionDiv",
+          "value": "DC"
+        },{
+          "variableName": "cntrNum",
+          "value": ""
+        },{
+          "variableName": "payRcvYn",
+          "value": "Y"
+        },{
+          "variableName": "retireMultiYn",
+          "value": "Y"
+        },{
+          "variableName": "dcJoinYn",
+          "value": "Y"
+        },{
+          "variableName": "irpJoinYn",
+          "value": "Y"
+        },{
+          "variableName": "custHp",
+          "value": "01012345678"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "custNm",
+          "value": "김생명",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "callDeviceDiv",
+          "value": "U",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "rtrPensionDiv",
+          "value": "DC",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "cntrNum",
+          "value": "",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "payRcvYn",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "retireMultiYn",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "dcJoinYn",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "irpJoinYn",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "custHp",
+          "value": "01012345678",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+  })
+})
+/////////////////////////////////////////////////
+
+>>>>>>> 1b2f29ca55df17af600735761f68b2f8ef088f00
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));
 });

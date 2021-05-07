@@ -1127,15 +1127,15 @@ app.post('/happy',function(req,res){
     })
   })
 
-<<<<<<< HEAD
+
 ///////////////에러테스트///////////////////////
 app.post('/error',function(req,res){
-  res.status(400).json({
+  res.status(200).json({
     "error":"error"
   })
 })
 ////////////////////////////
-=======
+
 /////////////////퇴직연금 DC_PDF 발송//////////////////////
 app.post('/DC_pdf',function(req,res){
   console.log('-----------퇴직연금 DC_PDF 발송---------')
@@ -1272,7 +1272,7 @@ app.post('/retiredCustInfo',function(req,res){
 })
 /////////////////////////////////////////////////
 
->>>>>>> 1b2f29ca55df17af600735761f68b2f8ef088f00
+
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));
 });

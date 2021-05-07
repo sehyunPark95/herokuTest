@@ -1311,6 +1311,20 @@ app.post('/IRP_move',function(req,res){
     })
   })
 ///////////////////////////////////////////////
+app.post('/custInfoChage',function(req,res){
+  console.log('-----------퇴직연금 고객정보 변경---------')
+  console.log(req.body.userInfo.query)
+  console.log('----------------')
+  
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "taskDtlDiv",
+          "value" : "RA30"
+        }
+      ]
+    })
+  })
 
 
 app.listen(app.get('port'), function () {

@@ -508,6 +508,13 @@ app.post('/custConfirm',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
+        },
+        {
+          "name": "test1234",
+          "value": "59",
+          "type": "NUMBER",
+          "action": "EQ",
+          "valueType": "TEXT"
         }
       ]
   })

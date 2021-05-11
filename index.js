@@ -1214,6 +1214,9 @@ app.post('/retiredCustInfo',function(req,res){
         },{
           "variableName" : "custAddr",
           "value"  : "행복시 행복구 행복동 7번지"
+        },{
+          "variableName" : "birthYmd",
+          "value" : "8701231"
         }
       ],
       "userVariable": [
@@ -1283,6 +1286,13 @@ app.post('/retiredCustInfo',function(req,res){
         {
           "name" : "custAddr",
           "value"  : "행복시 행복구 행복동 7번지",
+          "type" : "TEXT",
+          "action" : "EQ",
+          "valueType" : "TEXT"
+        },
+        {
+          "name" : "birthYmd",
+          "value" : "8701231",
           "type" : "TEXT",
           "action" : "EQ",
           "valueType" : "TEXT"

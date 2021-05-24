@@ -870,7 +870,7 @@ app.post('/max',function(req,res){
     })
   })
 //////////////////납입최고2//////////////////
-app.post('/max2',function(req,res){
+app.post('/max3',function(req,res){
   console.log('납입최고안내2')
   res.status(200).json({
     "data":[{
@@ -1146,8 +1146,8 @@ app.post('/error',function(req,res){
 })
 ////////////////////////////
 
-
-app.post('/TEST',function(req,res){
+//////////////납입최고 메인 테스트!!!!/////////////////
+app.post('/max2',function(req,res){
 
   var type = req.body.userInfo.userVariables.bzKndCode.value
   if(type == '003'){

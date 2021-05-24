@@ -1149,7 +1149,7 @@ app.post('/error',function(req,res){
 //////////////납입최고 메인 테스트!!!!/////////////////
 app.post('/max2',function(req,res){
 
-  var type = req.body.userInfo.userVariables.bzKndCode.value
+  var type = req.body.userInfo.userVariables.bzKndCod.value
   if(type == '003'){
     console.log('----통화처리결과----')
     console.log('업무코드: ',req.body.userInfo.userVariables.taskDtlDiv.value)

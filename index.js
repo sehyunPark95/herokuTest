@@ -1338,6 +1338,707 @@ app.post('/custInfoChage',function(req,res){
   })
 ///////////////////////////////////////////////////////////////
 
+app.post('/TEST',function(req,res){
+
+  var type = req.body.userInfo.userVariables.bzKndCode.value
+  if(type == '003'){
+    console.log('----통화처리결과----')
+    console.log('업무코드: ',req.body.userInfo.userVariables.taskDtlDiv.value)
+    console.log('업무명: ',req.body.userInfo.userVariables.taskDtlDivNm.value)
+    console.log('통화결과: ',req.body.userInfo.userVariables.callRslt.value)
+    console.log('처리결과: ',req.body.userInfo.userVariables.procRslt.value)
+    res.status(200).json({
+      "data":[{
+        "variableName":"dummy",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "rslt",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '004'){
+    console.log('----영업일확인----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"dummy",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "holDtYn",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "workDtYn",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '001'){
+    console.log('----고객정보확인----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"dummy",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "custNm",
+          "value": "홍길동",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "personNo",
+          "value": "951005",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuredNm",
+          "value": "정승A",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '101'){
+    console.log('----납입최고안내----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"dummy",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "cntrCnt",
+          "value": "3",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanInts",
+          "value": "56000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuPremSum",
+          "value": "55000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanTot",
+          "value": "111000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "dbDiv",
+          "value": "D",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "payDtm",
+          "value": "2020년11월",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "payDt",
+          "value": "2020년11월29일",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanIntYn",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bbkPrk",
+          "value": "동양생명(200801)",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "pymNcse",
+          "value": "3",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "rsvrYn",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "branchNm",
+          "value": "종각지점",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "rsvrNm",
+          "value": "이인자",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "rsvrHp",
+          "value": "01092400783",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuNm1",
+          "value": "3445568",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "pymNcse1",
+          "value": "2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "shrtProdNm1",
+          "value": "하나로암보험",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanIntYn1",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuPremSum1",
+          "value": "54000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanInts1",
+          "value": "3000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanTot1",
+          "value": "112000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuNm2",
+          "value": "3445568",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "pymNcse2",
+          "value": "2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "shrtProdNm2",
+          "value": "하나로암보험2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanIntYn2",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuPremSum2",
+          "value": "54000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanInts2",
+          "value": "3000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanTot2",
+          "value": "112000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuNm3",
+          "value": "3445568",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "pymNcse3",
+          "value": "2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "shrtProdNm3",
+          "value": "하나로암보험3",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanIntYn3",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuPremSum3",
+          "value": "54000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanInts3",
+          "value": "3000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanTot3",
+          "value": "112000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuNm4",
+          "value": "3445568",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "pymNcse4",
+          "value": "2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "shrtProdNm4",
+          "value": "하나로암보험4",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanIntYn4",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuPremSum4",
+          "value": "54000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanInts4",
+          "value": "3000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanTot4",
+          "value": "112000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuNm5",
+          "value": "3445568",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "pymNcse5",
+          "value": "2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "shrtProdNm5",
+          "value": "하나로암보험5",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanIntYn5",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuPremSum5",
+          "value": "54000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanInts5",
+          "value": "3000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "insuLoanTot5",
+          "value": "112000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '007'){
+    console.log('----알림톡발송----')
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "taskDtlDiv",
+          "value" : "RA30"
+        }
+      ]
+    })
+  }else if(type == '102'){
+    console.log('출금가능계좌조회')
+    res.status(200).json({
+      "data":[{
+        "variableName":"dummy",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "custNm",
+          "value": "홍길동",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "custNo",
+          "value": "9510051111222",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntCnt",
+          "value": "3",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bankCd1",
+          "value": "003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bankNm1",
+          "value": "국민은행",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntPk1",
+          "value": "555555555",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntNo1",
+          "value": "5709930987",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bankCd2",
+          "value": "003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bankNm2",
+          "value": "국민은행2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntPk2",
+          "value": "555555555",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntNo2",
+          "value": "57099309872",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bankCd3",
+          "value": "003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bankNm3",
+          "value": "국민은행3",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntPk3",
+          "value": "555555555",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntNo3",
+          "value": "5709930983",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bankCd4",
+          "value": "003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bankNm4",
+          "value": "국민은행4",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntPk4",
+          "value": "555555555",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntNo4",
+          "value": "5709930987",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bankCd5",
+          "value": "003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "bankNm5",
+          "value": "국민은행5",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntPk5",
+          "value": "555555555",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "acntNo5",
+          "value": "5709930987",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '103'){
+    console.log('----연장유예신청----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"dummy",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "rslt",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '104'){
+    console.log('----연장유예승인취소----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"dummy",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "rslt",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '005'){
+    console.log('핸드폰인증')
+    res.status(200).json({
+      "data":[{
+        "variableName":"dummy",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "rslt",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "reqUniqNo",
+          "value": "1234",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "resUniqNo",
+          "value": "1234",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '006'){
+    console.log('----인증번호확인----')
+    var authCode = req.body.userInfo.userVariables.authCode.value;
+    authCode = authCode == '1234' ? 'Y': 'N';
+    res.status(200).json({
+      "data":[{
+        "variableName":"dummy",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "rslt",
+          "value": authCode,
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }
+    
+})
+
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));
 });

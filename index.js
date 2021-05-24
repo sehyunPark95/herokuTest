@@ -1148,50 +1148,30 @@ app.post('/error',function(req,res){
 
 //////////////납입최고 메인 테스트!!!!/////////////////
 app.post('/max2',function(req,res){
-
   var type = req.body.userInfo.userVariables.bzKndCod.value
+  var result
+
   if(type == '003'){
     console.log('----통화처리결과----')
     console.log('업무코드: ',req.body.userInfo.userVariables.taskDtlDiv.value)
     console.log('업무명: ',req.body.userInfo.userVariables.taskDtlDivNm.value)
     console.log('통화결과: ',req.body.userInfo.userVariables.callRslt.value)
     console.log('처리결과: ',req.body.userInfo.userVariables.procRslt.value)
-    res.status(200).json({
-      "data":[{
-        "variableName":"dummy",
-        "value":"true"
-      }],
-      "userVariable": [
+    res.status(200).json( {
+      "data": [
         {
-          "name": "rslt",
-          "value": "Y",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "variableName" : "taskDtlDiv",
+          "value" : "RA30"
         }
       ]
     })
   }else if(type == '004'){
     console.log('----영업일확인----')
-    res.status(200).json({
-      "data":[{
-        "variableName":"dummy",
-        "value":"true"
-      }],
-      "userVariable": [
+    res.status(200).json( {
+      "data": [
         {
-          "name": "holDtYn",
-          "value": "N",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "workDtYn",
-          "value": "N",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "variableName" : "taskDtlDiv",
+          "value" : "RA30"
         }
       ]
     })

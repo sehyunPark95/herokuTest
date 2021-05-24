@@ -1832,6 +1832,15 @@ app.post('/max2',function(req,res){
           "variableName" : "taskDtlDiv",
           "value" : "RA30"
         }
+      ],
+      "userVariable": [
+        {
+          "name": "rslt",
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
       ]
     })
   }

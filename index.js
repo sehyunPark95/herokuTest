@@ -1224,9 +1224,9 @@ app.post('/max2',function(req,res){
         {
           "name": "insuLoanInts",
           "value": "56000",
-          "type": "TEXT",
+          "type": "NUMBER",
           "action": "EQ",
-          "valueType": "TEXT"
+          "valueType": "NUMBER"
         },
         {
           "name": "insuPremSum",

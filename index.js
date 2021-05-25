@@ -1594,9 +1594,9 @@ app.post('/max2',function(req,res){
         {
           "name": "acntCnt",
           "value": "3",
-          "type": "TEXT",
+          "type": "NUMBER",
           "action": "EQ",
-          "valueType": "TEXT"
+          "valueType": "NUMBER"
         },
         {
           "name": "bankCd1",
@@ -1844,7 +1844,6 @@ app.post('/max2',function(req,res){
       ]
     })
   }
-    
 })
 
 app.listen(app.get('port'), function () {

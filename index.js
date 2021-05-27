@@ -1230,347 +1230,347 @@ app.post('/max2',function(req,res){
       }],
       "userVariable": [
         {
-          "NAME": "CNTRCNT",
-          "VALUE": "3",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "CNTRCNT",
+          "value": "3",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTS",
-          "VALUE": "56000",
-          "TYPE": "NUMBER",
-          "ACTION": "EQ",
-          "VALUETYPE": "NUMBER"
+          "name": "INSULOANINTS",
+          "value": "56000",
+          "type": "NUMBER",
+          "action": "EQ",
+          "valuetype": "NUMBER"
         },
         {
-          "NAME": "INSUPREMSUM",
-          "VALUE": "55000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUPREMSUM",
+          "value": "55000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANTOT",
-          "VALUE": "111000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANTOT",
+          "value": "111000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "DBDIV",
-          "VALUE": "D",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "DBDIV",
+          "value": "D",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "PAYDTM",
-          "VALUE": "2020년11월",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "PAYDTM",
+          "value": "2020년11월",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "PAYDT",
-          "VALUE": "2020년11월29일",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "PAYDT",
+          "value": "2020년11월29일",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTYN",
-          "VALUE": "Y",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTYN",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BBKPRK",
-          "VALUE": "동양생명(200801)",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BBKPRK",
+          "value": "동양생명(200801)",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "PYMNCSE",
-          "VALUE": "3",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "PYMNCSE",
+          "value": "3",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "RSVRYN",
-          "VALUE": "Y",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "RSVRYN",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BRANCHNM",
-          "VALUE": "종각지점",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BRANCHNM",
+          "value": "종각지점",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "RSVRNM",
-          "VALUE": "이인자",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "RSVRNM",
+          "value": "이인자",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "RSVRHP",
-          "VALUE": "01092400783",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "RSVRHP",
+          "value": "01092400783",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSUNM1",
-          "VALUE": "3445568",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUNM1",
+          "value": "3445568",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "PYMNCSE1",
-          "VALUE": "2",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "PYMNCSE1",
+          "value": "2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "SHRTPRODNM1",
-          "VALUE": "하나로암보험",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "SHRTPRODNM1",
+          "value": "하나로암보험",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTYN1",
-          "VALUE": "Y",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTYN1",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSUPREMSUM1",
-          "VALUE": "54000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUPREMSUM1",
+          "value": "54000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTS1",
-          "VALUE": "3000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTS1",
+          "value": "3000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANTOT1",
-          "VALUE": "112000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANTOT1",
+          "value": "112000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSUNM2",
-          "VALUE": "3445568",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUNM2",
+          "value": "3445568",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "PYMNCSE2",
-          "VALUE": "2",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "PYMNCSE2",
+          "value": "2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "SHRTPRODNM2",
-          "VALUE": "하나로암보험2",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "SHRTPRODNM2",
+          "value": "하나로암보험2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTYN2",
-          "VALUE": "Y",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTYN2",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSUPREMSUM2",
-          "VALUE": "54000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUPREMSUM2",
+          "value": "54000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTS2",
-          "VALUE": "3000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTS2",
+          "value": "3000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANTOT2",
-          "VALUE": "112000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANTOT2",
+          "value": "112000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSUNM3",
-          "VALUE": "3445568",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUNM3",
+          "value": "3445568",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "PYMNCSE3",
-          "VALUE": "2",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "PYMNCSE3",
+          "value": "2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "SHRTPRODNM3",
-          "VALUE": "하나로암보험3",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "SHRTPRODNM3",
+          "value": "하나로암보험3",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTYN3",
-          "VALUE": "Y",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTYN3",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSUPREMSUM3",
-          "VALUE": "54000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUPREMSUM3",
+          "value": "54000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTS3",
-          "VALUE": "3000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTS3",
+          "value": "3000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANTOT3",
-          "VALUE": "112000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANTOT3",
+          "value": "112000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSUNM4",
-          "VALUE": "3445568",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUNM4",
+          "value": "3445568",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "PYMNCSE4",
-          "VALUE": "2",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "PYMNCSE4",
+          "value": "2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "SHRTPRODNM4",
-          "VALUE": "하나로암보험4",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "SHRTPRODNM4",
+          "value": "하나로암보험4",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTYN4",
-          "VALUE": "Y",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTYN4",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSUPREMSUM4",
-          "VALUE": "54000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUPREMSUM4",
+          "value": "54000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTS4",
-          "VALUE": "3000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTS4",
+          "value": "3000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANTOT4",
-          "VALUE": "112000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANTOT4",
+          "value": "112000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSUNM5",
-          "VALUE": "3445568",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUNM5",
+          "value": "3445568",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "PYMNCSE5",
-          "VALUE": "2",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "PYMNCSE5",
+          "value": "2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "SHRTPRODNM5",
-          "VALUE": "하나로암보험5",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "SHRTPRODNM5",
+          "value": "하나로암보험5",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTYN5",
-          "VALUE": "Y",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTYN5",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSUPREMSUM5",
-          "VALUE": "54000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSUPREMSUM5",
+          "value": "54000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANINTS5",
-          "VALUE": "3000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANINTS5",
+          "value": "3000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "INSULOANTOT5",
-          "VALUE": "112000",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "INSULOANTOT5",
+          "value": "112000",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         }
       ]
     })
@@ -1593,165 +1593,165 @@ app.post('/max2',function(req,res){
       }],
       "userVariable": [
         {
-          "NAME": "CUSTNM",
-          "VALUE": "홍길동",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "CUSTNM",
+          "value": "홍길동",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "CUSTNO",
-          "VALUE": "9510051111222",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "CUSTNO",
+          "value": "9510051111222",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTCNT",
-          "VALUE": "3",
-          "TYPE": "NUMBER",
-          "ACTION": "EQ",
-          "VALUETYPE": "NUMBER"
+          "name": "ACNTCNT",
+          "value": "3",
+          "type": "NUMBER",
+          "action": "EQ",
+          "valuetype": "NUMBER"
         },
         {
-          "NAME": "BANKCD1",
-          "VALUE": "003",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BANKCD1",
+          "value": "003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BANKNM1",
-          "VALUE": "국민은행",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BANKNM1",
+          "value": "국민은행",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTPK1",
-          "VALUE": "555555555",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "ACNTPK1",
+          "value": "555555555",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTNO1",
-          "VALUE": "5709930987",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "ACNTNO1",
+          "value": "5709930987",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BANKCD2",
-          "VALUE": "003",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BANKCD2",
+          "value": "003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BANKNM2",
-          "VALUE": "국민은행2",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BANKNM2",
+          "value": "국민은행2",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTPK2",
-          "VALUE": "555555555",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "ACNTPK2",
+          "value": "555555555",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTNO2",
-          "VALUE": "57099309872",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "ACNTNO2",
+          "value": "57099309872",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BANKCD3",
-          "VALUE": "003",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BANKCD3",
+          "value": "003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BANKNM3",
-          "VALUE": "국민은행3",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BANKNM3",
+          "value": "국민은행3",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTPK3",
-          "VALUE": "555555555",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "ACNTPK3",
+          "value": "555555555",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTNO3",
-          "VALUE": "5709930983",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "ACNTNO3",
+          "value": "5709930983",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BANKCD4",
-          "VALUE": "003",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BANKCD4",
+          "value": "003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BANKNM4",
-          "VALUE": "국민은행4",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BANKNM4",
+          "value": "국민은행4",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTPK4",
-          "VALUE": "555555555",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "ACNTPK4",
+          "value": "555555555",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTNO4",
-          "VALUE": "5709930987",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "ACNTNO4",
+          "value": "5709930987",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BANKCD5",
-          "VALUE": "003",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BANKCD5",
+          "value": "003",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "BANKNM5",
-          "VALUE": "국민은행5",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "BANKNM5",
+          "value": "국민은행5",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTPK5",
-          "VALUE": "555555555",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "ACNTPK5",
+          "value": "555555555",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         },
         {
-          "NAME": "ACNTNO5",
-          "VALUE": "5709930987",
-          "TYPE": "TEXT",
-          "ACTION": "EQ",
-          "VALUETYPE": "TEXT"
+          "name": "ACNTNO5",
+          "value": "5709930987",
+          "type": "TEXT",
+          "action": "EQ",
+          "valuetype": "TEXT"
         }
       ]
     })

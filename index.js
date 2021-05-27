@@ -1858,7 +1858,7 @@ app.post('/max2',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": 'P',
+          "value": 'Y',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

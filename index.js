@@ -477,6 +477,29 @@ app.post('/custRtrSend',function(req,res){
       ]
   })
 })
+
+/////////알림톡발송 퇴직연금////////////
+
+app.post('/ALMTALK',function(req,res){
+  res.status(200).json( {
+    /*"message": test2*/
+      "data": [
+        {
+          "variableName": "RSLT",
+          "value": "Y"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+  })
+})
 ///////////////고객정보확인///////////////////
 app.post('/custConfirm',function(req,res){
   res.status(200).json( {

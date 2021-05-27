@@ -1148,19 +1148,18 @@ app.post('/error',function(req,res){
 
 //////////////납입최고 메인 테스트!!!!/////////////////
 app.post('/max2',function(req,res){
-  var type = req.body.userInfo.userVariables.bzKndCod.value
-  var result
+  var type = req.body.userInfo.userVariables.BZKNDCOD.value
 
   if(type == '003'){
     console.log('----통화처리결과----')
-    console.log('업무코드: ',req.body.userInfo.userVariables.taskDtlDiv.value)
-    console.log('업무명: ',req.body.userInfo.userVariables.taskDtlDivNm.value)
-    console.log('통화결과: ',req.body.userInfo.userVariables.callRslt.value)
-    console.log('처리결과: ',req.body.userInfo.userVariables.procRslt.value)
+    console.log('업무코드: ',req.body.userInfo.userVariables.TASKDTLDIV.value)
+    console.log('업무명: ',req.body.userInfo.userVariables.TASKDTLDIVNM.value)
+    console.log('통화결과: ',req.body.userInfo.userVariables.CALLRSLT.value)
+    console.log('처리결과: ',req.body.userInfo.userVariables.PROCRSLT.value)
     res.status(200).json( {
       "data": [
         {
-          "variableName" : "taskDtlDiv",
+          "variableName" : "DUMMY",
           "value" : "RA30"
         }
       ]
@@ -1170,7 +1169,7 @@ app.post('/max2',function(req,res){
     res.status(200).json( {
       "data": [
         {
-          "variableName" : "taskDtlDiv",
+          "variableName" : "DUMMY",
           "value" : "RA30"
         }
       ]
@@ -1179,26 +1178,26 @@ app.post('/max2',function(req,res){
     console.log('----고객정보확인----')
     res.status(200).json({
       "data":[{
-        "variableName":"dummy",
+        "variableName":"DUMMY",
         "value":"true"
       }],
       "userVariable": [
         {
-          "name": "custNm",
+          "name": "CUSTNM",
           "value": "홍길동",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },
         {
-          "name": "personNo",
+          "name": "PERSONNO",
           "value": "9510053",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },
         {
-          "name": "insuredNm",
+          "name": "INSUREDNM",
           "value": "정승A",
           "type": "TEXT",
           "action": "EQ",
@@ -1210,352 +1209,352 @@ app.post('/max2',function(req,res){
     console.log('----납입최고안내----')
     res.status(200).json({
       "data":[{
-        "variableName":"dummy",
+        "variableName":"DUMMY",
         "value":"true"
       }],
       "userVariable": [
         {
-          "name": "cntrCnt",
-          "value": "3",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "CNTRCNT",
+          "VALUE": "3",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanInts",
-          "value": "56000",
-          "type": "NUMBER",
-          "action": "EQ",
-          "valueType": "NUMBER"
+          "NAME": "INSULOANINTS",
+          "VALUE": "56000",
+          "TYPE": "NUMBER",
+          "ACTION": "EQ",
+          "VALUETYPE": "NUMBER"
         },
         {
-          "name": "insuPremSum",
-          "value": "55000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUPREMSUM",
+          "VALUE": "55000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanTot",
-          "value": "111000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANTOT",
+          "VALUE": "111000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "dbDiv",
-          "value": "D",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "DBDIV",
+          "VALUE": "D",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "payDtm",
-          "value": "2020년11월",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "PAYDTM",
+          "VALUE": "2020년11월",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "payDt",
-          "value": "2020년11월29일",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "PAYDT",
+          "VALUE": "2020년11월29일",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanIntYn",
-          "value": "Y",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTYN",
+          "VALUE": "Y",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "bbkPrk",
-          "value": "동양생명(200801)",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BBKPRK",
+          "VALUE": "동양생명(200801)",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "pymNcse",
-          "value": "3",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "PYMNCSE",
+          "VALUE": "3",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "rsvrYn",
-          "value": "Y",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "RSVRYN",
+          "VALUE": "Y",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "branchNm",
-          "value": "종각지점",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BRANCHNM",
+          "VALUE": "종각지점",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "rsvrNm",
-          "value": "이인자",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "RSVRNM",
+          "VALUE": "이인자",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "rsvrHp",
-          "value": "01092400783",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "RSVRHP",
+          "VALUE": "01092400783",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuNm1",
-          "value": "3445568",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUNM1",
+          "VALUE": "3445568",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "pymNcse1",
-          "value": "2",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "PYMNCSE1",
+          "VALUE": "2",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "shrtProdNm1",
-          "value": "하나로암보험",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "SHRTPRODNM1",
+          "VALUE": "하나로암보험",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanIntYn1",
-          "value": "Y",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTYN1",
+          "VALUE": "Y",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuPremSum1",
-          "value": "54000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUPREMSUM1",
+          "VALUE": "54000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanInts1",
-          "value": "3000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTS1",
+          "VALUE": "3000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanTot1",
-          "value": "112000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANTOT1",
+          "VALUE": "112000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuNm2",
-          "value": "3445568",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUNM2",
+          "VALUE": "3445568",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "pymNcse2",
-          "value": "2",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "PYMNCSE2",
+          "VALUE": "2",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "shrtProdNm2",
-          "value": "하나로암보험2",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "SHRTPRODNM2",
+          "VALUE": "하나로암보험2",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanIntYn2",
-          "value": "Y",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTYN2",
+          "VALUE": "Y",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuPremSum2",
-          "value": "54000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUPREMSUM2",
+          "VALUE": "54000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanInts2",
-          "value": "3000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTS2",
+          "VALUE": "3000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanTot2",
-          "value": "112000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANTOT2",
+          "VALUE": "112000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuNm3",
-          "value": "3445568",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUNM3",
+          "VALUE": "3445568",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "pymNcse3",
-          "value": "2",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "PYMNCSE3",
+          "VALUE": "2",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "shrtProdNm3",
-          "value": "하나로암보험3",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "SHRTPRODNM3",
+          "VALUE": "하나로암보험3",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanIntYn3",
-          "value": "Y",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTYN3",
+          "VALUE": "Y",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuPremSum3",
-          "value": "54000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUPREMSUM3",
+          "VALUE": "54000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanInts3",
-          "value": "3000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTS3",
+          "VALUE": "3000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanTot3",
-          "value": "112000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANTOT3",
+          "VALUE": "112000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuNm4",
-          "value": "3445568",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUNM4",
+          "VALUE": "3445568",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "pymNcse4",
-          "value": "2",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "PYMNCSE4",
+          "VALUE": "2",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "shrtProdNm4",
-          "value": "하나로암보험4",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "SHRTPRODNM4",
+          "VALUE": "하나로암보험4",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanIntYn4",
-          "value": "Y",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTYN4",
+          "VALUE": "Y",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuPremSum4",
-          "value": "54000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUPREMSUM4",
+          "VALUE": "54000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanInts4",
-          "value": "3000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTS4",
+          "VALUE": "3000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanTot4",
-          "value": "112000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANTOT4",
+          "VALUE": "112000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuNm5",
-          "value": "3445568",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUNM5",
+          "VALUE": "3445568",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "pymNcse5",
-          "value": "2",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "PYMNCSE5",
+          "VALUE": "2",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "shrtProdNm5",
-          "value": "하나로암보험5",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "SHRTPRODNM5",
+          "VALUE": "하나로암보험5",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanIntYn5",
-          "value": "Y",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTYN5",
+          "VALUE": "Y",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuPremSum5",
-          "value": "54000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSUPREMSUM5",
+          "VALUE": "54000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanInts5",
-          "value": "3000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANINTS5",
+          "VALUE": "3000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "insuLoanTot5",
-          "value": "112000",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "INSULOANTOT5",
+          "VALUE": "112000",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         }
       ]
     })
@@ -1564,7 +1563,7 @@ app.post('/max2',function(req,res){
     res.status(200).json( {
       "data": [
         {
-          "variableName" : "taskDtlDiv",
+          "variableName" : "DUMMY",
           "value" : "RA30"
         }
       ]
@@ -1573,170 +1572,170 @@ app.post('/max2',function(req,res){
     console.log('출금가능계좌조회')
     res.status(200).json({
       "data":[{
-        "variableName":"dummy",
+        "variableName":"DUMMY",
         "value":"true"
       }],
       "userVariable": [
         {
-          "name": "custNm",
-          "value": "홍길동",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "CUSTNM",
+          "VALUE": "홍길동",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "custNo",
-          "value": "9510051111222",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "CUSTNO",
+          "VALUE": "9510051111222",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntCnt",
-          "value": "3",
-          "type": "NUMBER",
-          "action": "EQ",
-          "valueType": "NUMBER"
+          "NAME": "ACNTCNT",
+          "VALUE": "3",
+          "TYPE": "NUMBER",
+          "ACTION": "EQ",
+          "VALUETYPE": "NUMBER"
         },
         {
-          "name": "bankCd1",
-          "value": "003",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BANKCD1",
+          "VALUE": "003",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "bankNm1",
-          "value": "국민은행",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BANKNM1",
+          "VALUE": "국민은행",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntPk1",
-          "value": "555555555",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "ACNTPK1",
+          "VALUE": "555555555",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntNo1",
-          "value": "5709930987",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "ACNTNO1",
+          "VALUE": "5709930987",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "bankCd2",
-          "value": "003",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BANKCD2",
+          "VALUE": "003",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "bankNm2",
-          "value": "국민은행2",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BANKNM2",
+          "VALUE": "국민은행2",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntPk2",
-          "value": "555555555",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "ACNTPK2",
+          "VALUE": "555555555",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntNo2",
-          "value": "57099309872",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "ACNTNO2",
+          "VALUE": "57099309872",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "bankCd3",
-          "value": "003",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BANKCD3",
+          "VALUE": "003",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "bankNm3",
-          "value": "국민은행3",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BANKNM3",
+          "VALUE": "국민은행3",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntPk3",
-          "value": "555555555",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "ACNTPK3",
+          "VALUE": "555555555",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntNo3",
-          "value": "5709930983",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "ACNTNO3",
+          "VALUE": "5709930983",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "bankCd4",
-          "value": "003",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BANKCD4",
+          "VALUE": "003",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "bankNm4",
-          "value": "국민은행4",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BANKNM4",
+          "VALUE": "국민은행4",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntPk4",
-          "value": "555555555",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "ACNTPK4",
+          "VALUE": "555555555",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntNo4",
-          "value": "5709930987",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "ACNTNO4",
+          "VALUE": "5709930987",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "bankCd5",
-          "value": "003",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BANKCD5",
+          "VALUE": "003",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "bankNm5",
-          "value": "국민은행5",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "BANKNM5",
+          "VALUE": "국민은행5",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntPk5",
-          "value": "555555555",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "ACNTPK5",
+          "VALUE": "555555555",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         },
         {
-          "name": "acntNo5",
-          "value": "5709930987",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
+          "NAME": "ACNTNO5",
+          "VALUE": "5709930987",
+          "TYPE": "TEXT",
+          "ACTION": "EQ",
+          "VALUETYPE": "TEXT"
         }
       ]
     })
@@ -1744,12 +1743,12 @@ app.post('/max2',function(req,res){
     console.log('----연장유예신청----')
     res.status(200).json({
       "data":[{
-        "variableName":"dummy",
+        "variableName":"DUMMY",
         "value":"true"
       }],
       "userVariable": [
         {
-          "name": "rslt",
+          "name": "RSLT",
           "value": "Y",
           "type": "TEXT",
           "action": "EQ",
@@ -1761,12 +1760,12 @@ app.post('/max2',function(req,res){
     console.log('----연장유예승인취소----')
     res.status(200).json({
       "data":[{
-        "variableName":"dummy",
+        "variableName":"DUMMY",
         "value":"true"
       }],
       "userVariable": [
         {
-          "name": "rslt",
+          "name": "RSLT",
           "value": "Y",
           "type": "TEXT",
           "action": "EQ",
@@ -1778,26 +1777,26 @@ app.post('/max2',function(req,res){
     console.log('핸드폰인증')
     res.status(200).json({
       "data":[{
-        "variableName":"dummy",
+        "variableName":"DUMMY",
         "value":"true"
       }],
       "userVariable": [
         {
-          "name": "rslt",
+          "name": "RSLT",
           "value": "Y",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },
         {
-          "name": "reqUniqNo",
+          "name": "REQUNIQNO",
           "value": "1234",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },
         {
-          "name": "resUniqNo",
+          "name": "RESUNIQNO",
           "value": "1234",
           "type": "TEXT",
           "action": "EQ",
@@ -1808,15 +1807,15 @@ app.post('/max2',function(req,res){
   }else if(type == '006'){
     console.log('----인증번호확인----')
     var authCode = req.body.userInfo.userVariables.authCode.value;
-    authCode = authCode == '1234' ? 'Y': 'N';
+    authCode = authCode == '123456' ? 'Y': 'N';
     res.status(200).json({
       "data":[{
-        "variableName":"dummy",
+        "variableName":"DUMMY",
         "value":"true"
       }],
       "userVariable": [
         {
-          "name": "rslt",
+          "name": "RSLT",
           "value": authCode,
           "type": "TEXT",
           "action": "EQ",
@@ -1829,7 +1828,7 @@ app.post('/max2',function(req,res){
     res.status(200).json( {
       "data": [
         {
-          "variableName" : "taskDtlDiv",
+          "variableName" : "TASKTLDIV",
           "value" : "RA30"
         }
       ],

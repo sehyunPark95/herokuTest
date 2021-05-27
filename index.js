@@ -1218,13 +1218,6 @@ app.post('/max2',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
-        },
-        {
-          "name": "INSUREDNM",
-          "value": "정승A",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
         }
       ]
     })

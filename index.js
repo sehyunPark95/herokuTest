@@ -1861,6 +1861,463 @@ app.post('/max2',function(req,res){
   }
 })
 
+app.post('/HappyCall',function(req,res){
+  var type = req.body.userInfo.userVariables.BZKNDCOD.value
+  if(type == '003'){
+    console.log('----통화처리결과----')
+    console.log('업무코드: ',req.body.userInfo.userVariables.TASKDTLDIV.value)
+    console.log('업무명: ',req.body.userInfo.userVariables.TASKDTLDIVNM.value)
+    console.log('통화결과: ',req.body.userInfo.userVariables.CALLRSLT.value)
+    console.log('처리결과: ',req.body.userInfo.userVariables.PROCRSLT.value)
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "DUMMY",
+          "value" : "RA30"
+        }
+      ]
+    })
+  }else if(type == '107'){
+    console.log('유효성체크')
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "TASKTLDIV",
+          "value" : "RA30"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '006'){
+    console.log('----인증번호확인----')
+    var authCode = req.body.userInfo.userVariables.AUTHCODE.value;
+    authCode = authCode == '123456' ? 'Y': 'N';
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": authCode,
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '005'){
+    console.log('핸드폰인증')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "REQUNIQNO",
+          "value": "1234",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RESUNIQNO",
+          "value": "1234",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '001'){
+    console.log('----고객정보확인----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "CUSTNM",
+          "value": "홍길동",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PERSONNO",
+          "value": "9510053",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '004'){
+    console.log('----영업일확인----')
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "DUMMY",
+          "value" : "RA30"
+        }
+      ]
+    })
+  }else if(type == '105'){
+    console.log('----해피콜계약정보----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "INSUNM",
+          "value": '34445568',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "SHRTPRODNM",
+          "value": '실속하나로암보험',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CNTRDT",
+          "value": '8월12일',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PLANNERNM",
+          "value": '로제',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "INSURER",
+          "value": '박세현',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "INSURED",
+          "value": '이지아',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PAYPERIOD",
+          "value": '5년',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "INSUPERIOD",
+          "value": '20년',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PAYAMT",
+          "value": '56700',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RSVRYN",
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "BRANCHNM",
+          "value": '종각지점',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RSVRNM",
+          "value": '박수금',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RSVRHP",
+          "value": '01056668888',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PROCSTAT",
+          "value": '1차보완',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '106'){
+    console.log('----해피콜스크립트정보----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "QUESTCNT",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD1",
+          "value": "400101",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD2",
+          "value": "400105",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD3",
+          "value": "400701",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD4",
+          "value": "400201",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD5",
+          "value": "400702",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD6",
+          "value": "400704",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD7",
+          "value": "100204",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD8",
+          "value": "200802",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD9",
+          "value": "200104",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD10",
+          "value": "200702",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD11",
+          "value": "200301",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD12",
+          "value": "400301",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD13",
+          "value": "300801",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD14",
+          "value": "300903",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD15",
+          "value": "301601",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD16",
+          "value": "400401",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD17",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD18",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD19",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD20",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD21",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD22",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD23",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD24",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD25",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD26",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD27",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD28",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD29",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "QUESTCD30",
+          "value": "10",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }
+})
+
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));
 });

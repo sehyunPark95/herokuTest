@@ -2319,6 +2319,126 @@ app.post('/HappyCall',function(req,res){
   }
 })
 
+//////////////////////////////////////////
+////////// 보험심사 테스트 ////////// 
+app.post('/doc',function(req,res){
+  var type = req.body.userInfo.userVariables.BZKNDCOD.value
+
+  if(type == '003'){
+    console.log('--- 통화처리결과 ---')
+    console.log('업무코드: ', req.body.userInfo.userVariables.TASKDTLDIV.value)
+    console.log('업무명: ', req.body.userInfo.userVariables.TASKDTLDIVNM.value)
+    console.log('통화결과: ', req.body.userInfo.userVariables.CALLRSLT.value)
+    console.log('처리결과: ', req.body.userInfo.userVariables.PROCRSLT.value)
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "DUMMY",
+          "value" : "RA30"
+        }
+      ]
+    })
+  }else if(type == '004'){
+    console.log('----영업일확인----')
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "DUMMY",
+          "value" : "RA30"
+        }
+      ]
+    })
+  }else if(type == '002'){
+    console.log('----고객정보확인----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "CUSTNM",
+          "value": "최은빈",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PERSONNO",
+          "value": "8712232",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },{
+          "name": "INSUREDNM",
+          "value": "최은빈", 
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '201'){
+    console.log('--- 면책사유조회 ---')
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "DUMMY",
+          "value" : "true"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "GUIDECD",
+          "value": "05L004M011S019",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '202'){
+    console.log('--- 청구서류조회 ---')
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "DUMMY",
+          "value" : "true"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "GUIDECD",
+          "value": "05L004M012S020",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '009'){
+    console.log('--- 유효성체크 ---')
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "TASKTLDIV",
+          "value" : "RA30"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }
+})
+//////////////////////////////////////////
+
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));
 });

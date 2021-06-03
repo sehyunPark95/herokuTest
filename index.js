@@ -11,6 +11,7 @@ const { window } = new JSDOM( "" );
 const $ = require( "jquery" )( window );
 const request = require('request')
 var k = ''
+
 /////커밋테스트
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
@@ -2325,7 +2326,7 @@ app.post('/HappyCall',function(req,res){
 app.post('/doc',function(req,res){
   var type = req.body.userInfo.userVariables.BZKNDCOD.value
   var key = req.body.userInfo.userVariables.KEY2.value
-  key == '30'
+  key = '30'
   
   if(type == '003'){
     console.log('--- 통화처리결과 ---')
@@ -2382,7 +2383,7 @@ app.post('/doc',function(req,res){
         }
       ]
     })
-  }else if(type == '201' && key == '30'){
+  }else if(type == '201'){
     console.log('--- 면책사유조회 ---')
     res.status(200).json( {
       "data": [
@@ -2401,7 +2402,7 @@ app.post('/doc',function(req,res){
         }
       ]
     })
-  }else if(type == '202' && key == '40'){
+  }else if(type == '202'){
     console.log('--- 청구서류조회 ---')
     res.status(200).json( {
       "data": [

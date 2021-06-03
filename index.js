@@ -2357,7 +2357,11 @@ app.post('/doc',function(req,res){
       "data":[{
         "variableName":"DUMMY",
         "value":"true"
-      }],
+      }, {
+        "variableName":"KEY2",
+        "value":"30"
+      }
+      ],
       "userVariable": [
         {
           "name": "CUSTNM",

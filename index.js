@@ -2338,9 +2338,6 @@ app.post('/doc',function(req,res){
         {
           "variableName" : "DUMMY",
           "value" : "RA30"
-        }, {
-          "variableName" : "KEY2",
-          "value" : "30"
         }
       ]
     })
@@ -2351,9 +2348,6 @@ app.post('/doc',function(req,res){
         {
           "variableName" : "DUMMY",
           "value" : "RA30"
-        }, {
-          "variableName" : "KEY2",
-          "value" : "30"
         }
       ]
     })
@@ -2363,10 +2357,7 @@ app.post('/doc',function(req,res){
       "data":[{
         "variableName":"DUMMY",
         "value":"true"
-      }, {
-          "variableName" : "KEY2",
-          "value" : "30"
-        }],
+      }],
       "userVariable": [
         {
           "name": "CUSTNM",
@@ -2397,9 +2388,6 @@ app.post('/doc',function(req,res){
         {
           "variableName" : "DUMMY",
           "value" : "true"
-        }, {
-          "variableName" : "KEY2",
-          "value" : "30"
         }
       ],
       "userVariable": [
@@ -2419,9 +2407,6 @@ app.post('/doc',function(req,res){
         {
           "variableName" : "DUMMY",
           "value" : "true"
-        }, {
-          "variableName" : "KEY2",
-          "value" : "30"
         }
       ],
       "userVariable": [
@@ -2441,9 +2426,6 @@ app.post('/doc',function(req,res){
         {
           "variableName" : "TASKTLDIV",
           "value" : "RA30"
-        }, {
-          "variableName" : "KEY2",
-          "value" : "30"
         }
       ],
       "userVariable": [

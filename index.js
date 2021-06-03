@@ -2671,6 +2671,15 @@ app.post('/doc',function(req,res){
           "variableName" : "DUMMY",
           "value" : "RA30"
         }
+      ],
+      "userVariable" : [
+        {
+          "name": "HOLDTTYN",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
       ]
     })
   }else if(type == '002'){

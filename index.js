@@ -2324,7 +2324,8 @@ app.post('/HappyCall',function(req,res){
 ////////// 보험심사 테스트 ////////// 
 app.post('/doc',function(req,res){
   var type = req.body.userInfo.userVariables.BZKNDCOD.value
-  var key = req.body.userInfo.userVariables.KEY2.value;
+  var key = req.body.userInfo.userVariables.KEY2.value
+  key == '30'
   
   if(type == '003'){
     console.log('--- 통화처리결과 ---')

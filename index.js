@@ -2320,6 +2320,328 @@ app.post('/HappyCall',function(req,res){
     })
   }
 })
+/////////////////////////////////////////
+//퇴직연금 인바운드
+app.post('/retiring_pension_in',function(req,res){
+  var type = req.body.userInfo.userVariables.BZKNDCOD.value
+    
+  if(type == '003'){
+    console.log('----통화처리결과----')
+    console.log('업무코드: ',req.body.userInfo.userVariables.TASKDTLDIV.value)
+    console.log('업무명: ',req.body.userInfo.userVariables.TASKDTLDIVNM.value)
+    console.log('통화결과: ',req.body.userInfo.userVariables.CALLRSLT.value)
+    console.log('처리결과: ',req.body.userInfo.userVariables.PROCRSLT.value)
+    console.log('사용자발화: ',req.body.userInfo.query)
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "DUMMY",
+          "value" : "RA30"
+        }
+      ]
+    })
+  }else if(type == '006'){
+    console.log('----인증번호확인----')
+    var authCode = req.body.userInfo.userVariables.AUTHCODE.value;
+    authCode = authCode == '123456' ? 'Y': 'N';
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": authCode,
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '005'){
+    console.log('핸드폰인증')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "REQUNIQNO",
+          "value": "1234",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RESUNIQNO",
+          "value": "1234",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '301'){
+    console.log('----퇴직연금 고객정보확인----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "CUSTNM",
+          "value": "김생명",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CUSTNO",
+          "value": "677877977",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CUSTREGHP",
+          "value": "01077884321",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PERSONNO",
+          "value": "950803",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RTRPENSIONDIV",
+          "value": "DC",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CUSTEMAIL",
+          "value": "abc@naver.com",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CUSTADDR",
+          "value": "서울시 마포구 공덕동 55-44",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CNTRNUM",
+          "value": "44557722",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PAYRCVYN",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RETIREMULTIYN",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "DCJOINYN",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "IRPJOINYN",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CALLDEVICEDIV",
+          "value": "U",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '302'){
+    console.log('----퇴직연금 상품 금리정보----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "PRODRATE1",
+          "value": '1년 만기 상품 금리  1.22%',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PRODRATE2",
+          "value": '2년 만기 상품 금리  2.22%',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PRODRATE3",
+          "value": '3년 만기 상품 금리 3.22%',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PRODRATE4",
+          "value": '5년 만기 상품 금리 5.22%',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PRODRATE5",
+          "value": 'ACTIVE 채권혼합형 상품 1.67%',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PRODRATE6",
+          "value": 'INDEX 채권혼합형 상품 2.67%',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PRODRATE7",
+          "value": '배당주 채권혼합형 상품 3.67%',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PRODRATE8",
+          "value": '가치주 채권혼합형 상품 4.67%',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PRODRATE9",
+          "value": '국내 주식형 상품 수익률 5.67%',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PRODRATE10",
+          "value": '해외 주식형 상품 수익률 6.67%',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '303'){
+    console.log('----퇴직연금 고객 연금 정보----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "CNTRNM",
+          "value": "홍길동",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RTRPAYREGDT",
+          "value": "2021년2월28일",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RTRPAYSCHDT",
+          "value": "2021년3월31일",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "TAXRTRPAYAMT",
+          "value": "35644400",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RTRPAYBALAMT",
+          "value": "35644400",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CUMRATE",
+          "value": "12.34%",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '303'){
+    console.log('----알림톡발송 퇴직연금----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }
+})
 
 //////////////////////////////////////////
 ////////// 보험심사 테스트 ////////// 
@@ -2357,11 +2679,7 @@ app.post('/doc',function(req,res){
       "data":[{
         "variableName":"DUMMY",
         "value":"true"
-      }, {
-        "variableName":"KEY2",
-        "value":"30"
-      }
-      ],
+      }],
       "userVariable": [
         {
           "name": "CUSTNM",

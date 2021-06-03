@@ -2674,7 +2674,7 @@ app.post('/doc',function(req,res){
       ],
       "userVariable" : [
         {
-          "name": "HOLDTTYN",
+          "name": "HOLDTYN",
           "value": "Y",
           "type": "TEXT",
           "action": "EQ",

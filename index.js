@@ -1863,6 +1863,7 @@ app.post('/max2',function(req,res){
 
 app.post('/HappyCall',function(req,res){
   var type = req.body.userInfo.userVariables.BZKNDCOD.value
+    
   if(type == '003'){
     console.log('----통화처리결과----')
     console.log('업무코드: ',req.body.userInfo.userVariables.TASKDTLDIV.value)
@@ -2323,13 +2324,15 @@ app.post('/HappyCall',function(req,res){
 ////////// 보험심사 테스트 ////////// 
 app.post('/doc',function(req,res){
   var type = req.body.userInfo.userVariables.BZKNDCOD.value
-
+  var key = req.body.userInfo.userVariables.KEY2.value;
+  
   if(type == '003'){
     console.log('--- 통화처리결과 ---')
     console.log('업무코드: ', req.body.userInfo.userVariables.TASKDTLDIV.value)
     console.log('업무명: ', req.body.userInfo.userVariables.TASKDTLDIVNM.value)
     console.log('통화결과: ', req.body.userInfo.userVariables.CALLRSLT.value)
     console.log('처리결과: ', req.body.userInfo.userVariables.PROCRSLT.value)
+    
     res.status(200).json( {
       "data": [
         {
@@ -2378,7 +2381,7 @@ app.post('/doc',function(req,res){
         }
       ]
     })
-  }else if(type == '201'){
+  }else if(type == '201' && key == '30'){
     console.log('--- 면책사유조회 ---')
     res.status(200).json( {
       "data": [
@@ -2397,7 +2400,7 @@ app.post('/doc',function(req,res){
         }
       ]
     })
-  }else if(type == '202'){
+  }else if(type == '202' && key == '40'){
     console.log('--- 청구서류조회 ---')
     res.status(200).json( {
       "data": [

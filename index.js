@@ -2325,8 +2325,6 @@ app.post('/HappyCall',function(req,res){
 ////////// 보험심사 테스트 ////////// 
 app.post('/doc',function(req,res){
   var type = req.body.userInfo.userVariables.BZKNDCOD.value
-  var key = req.body.userInfo.userVariables.KEY2.value
-  key = '30'
   
   if(type == '003'){
     console.log('--- 통화처리결과 ---')
@@ -2340,6 +2338,9 @@ app.post('/doc',function(req,res){
         {
           "variableName" : "DUMMY",
           "value" : "RA30"
+        }, {
+          "variableName" : "KEY2",
+          "value" : "30"
         }
       ]
     })
@@ -2350,6 +2351,9 @@ app.post('/doc',function(req,res){
         {
           "variableName" : "DUMMY",
           "value" : "RA30"
+        }, {
+          "variableName" : "KEY2",
+          "value" : "30"
         }
       ]
     })
@@ -2359,7 +2363,10 @@ app.post('/doc',function(req,res){
       "data":[{
         "variableName":"DUMMY",
         "value":"true"
-      }],
+      }, {
+          "variableName" : "KEY2",
+          "value" : "30"
+        }],
       "userVariable": [
         {
           "name": "CUSTNM",
@@ -2390,6 +2397,9 @@ app.post('/doc',function(req,res){
         {
           "variableName" : "DUMMY",
           "value" : "true"
+        }, {
+          "variableName" : "KEY2",
+          "value" : "30"
         }
       ],
       "userVariable": [
@@ -2409,6 +2419,9 @@ app.post('/doc',function(req,res){
         {
           "variableName" : "DUMMY",
           "value" : "true"
+        }, {
+          "variableName" : "KEY2",
+          "value" : "30"
         }
       ],
       "userVariable": [
@@ -2428,6 +2441,9 @@ app.post('/doc',function(req,res){
         {
           "variableName" : "TASKTLDIV",
           "value" : "RA30"
+        }, {
+          "variableName" : "KEY2",
+          "value" : "30"
         }
       ],
       "userVariable": [

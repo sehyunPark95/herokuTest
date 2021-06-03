@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 const bodyParser = require('body-parser');
-const {Log} = require('./logs');
 var moment = require('moment');
 const fetch = require("node-fetch");
 const { response } = require('express');

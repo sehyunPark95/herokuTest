@@ -2341,6 +2341,25 @@ app.post('/retiring_pension_in',function(req,res){
         }
       ]
     })
+  }else if(type == '306'){
+    console.log('유효성체크')
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "TASKTLDIV",
+          "value" : "RA30"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
   }else if(type == '006'){
     console.log('----인증번호확인----')
     var authCode = req.body.userInfo.userVariables.AUTHCODE.value;

@@ -2623,7 +2623,7 @@ app.post('/retiring_pension_in',function(req,res){
         }
       ]
     })
-  }else if(type == '303'){
+  }else if(type == '305'){
     console.log('----알림톡발송 퇴직연금----')
     res.status(200).json({
       "data":[{

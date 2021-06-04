@@ -2484,7 +2484,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "CALLDEVICEDIV",
-          "value": "U",
+          "value": "L",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

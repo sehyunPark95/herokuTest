@@ -2457,7 +2457,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "PAYRCVYN",
-          "value": "",
+          "value": "N",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

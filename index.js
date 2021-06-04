@@ -2469,7 +2469,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "CNTRNUM",
-          "value": "44557722",
+          "value": "NULL",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -2490,7 +2490,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "DCJOINYN",
-          "value": "N",
+          "value": "Y",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

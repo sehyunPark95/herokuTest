@@ -1871,6 +1871,7 @@ app.post('/HappyCall',function(req,res){
     console.log('업무명: ',req.body.userInfo.userVariables.TASKDTLDIVNM.value)
     console.log('통화결과: ',req.body.userInfo.userVariables.CALLRSLT.value)
     console.log('처리결과: ',req.body.userInfo.userVariables.PROCRSLT.value)
+    console.log('적합여부: ',req.body.userInfo.userVariables.REPLYTYP.value)
     console.log('사용자발화: ',req.body.userInfo.query)
     res.status(200).json( {
       "data": [

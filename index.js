@@ -2429,7 +2429,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "RTRPENSIONDIV",
-          "value": "CC",
+          "value": "DC",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -2450,7 +2450,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "CNTRNUM",
-          "value": "null",
+          "value": "44557722",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -2485,7 +2485,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "CALLDEVICEDIV",
-          "value": "L",
+          "value": "H",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -1511,6 +1511,182 @@ app.post('/retiring_pension_in',function(req,res){
     })
   }
 })
+/////////////////////////////////////////
+//퇴직연금 아웃바운드
+app.post('/retiring_pension_ob',function(req,res){
+  var type = req.body.userInfo.userVariables.BZKNDCOD.value
+    
+  if(type == '003'){
+    console.log('----통화처리결과----')
+    console.log('업무코드: ',req.body.userInfo.userVariables.TASKDTLDIV.value)
+    console.log('업무명: ',req.body.userInfo.userVariables.TASKDTLDIVNM.value)
+    console.log('통화결과: ',req.body.userInfo.userVariables.CALLRSLT.value)
+    console.log('처리결과: ',req.body.userInfo.userVariables.PROCRSLT.value)
+    console.log('사용자발화: ',req.body.userInfo.query)
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "DUMMY",
+          "value" : "RA30"
+        }
+      ]
+    })
+  }else if(type == '306'){
+    console.log('유효성체크')
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "TASKTLDIV",
+          "value" : "RA30"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '301'){
+    console.log('----퇴직연금 고객정보확인----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "CUSTNM",
+          "value": "김생명",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CUSTNO",
+          "value": "677877977",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CUSTREGHP",
+          "value": "01077884321",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PERSONNO",
+          "value": "950803",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RTRPENSIONDIV",
+          "value": "DC",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CUSTEMAIL",
+          "value": "abc@naver.com",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CUSTADDR",
+          "value": "서울시 마포구 공덕동 55-44",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CNTRNUM",
+          "value": "null",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PAYRCVYN",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "RETIREMULTIYN",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "DCJOINYN",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "IRPJOINYN",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "CALLDEVICEDIV",
+          "value": "L",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '304'){
+    console.log('----퇴직연금 계약이전 확인----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '305'){
+    console.log('----알림톡발송 퇴직연금----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }
+})
 
 //////////////////////////////////////////
 ////////// 보험심사 테스트 ////////// 

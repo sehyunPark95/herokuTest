@@ -746,6 +746,13 @@ app.post('/HappyCall',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
+        },
+        {
+          "name": "TEST",
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
         }
       ]
     })

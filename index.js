@@ -1594,6 +1594,13 @@ app.post('/retiring_pension_ob',function(req,res){
           "valueType": "TEXT"
         },
         {
+          "name": "OBLISTDIV",
+          "value": "PIC",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
           "name": "RTRPENSIONDIV",
           "value": "DC",
           "type": "TEXT",

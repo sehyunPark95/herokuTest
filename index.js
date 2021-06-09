@@ -1595,7 +1595,7 @@ app.post('/retiring_pension_ob',function(req,res){
         },
         {
           "name": "OBLISTDIV",
-          "value": "TDC",
+          "value": "PIC",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

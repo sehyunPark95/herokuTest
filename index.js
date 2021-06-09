@@ -1877,12 +1877,6 @@ app.post('/doc',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
-        },{
-          "name": "GUIDECD",
-          "value": "05L004M012S020",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
         }
       ]
     })

@@ -45,6 +45,22 @@ app.post('/max2',function(req,res){
           "variableName" : "DUMMY",
           "value" : "RA30"
         }
+      ],
+      "userVariable": [
+        {
+          "name": "WORKDTYN",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "HOLDTYN",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
       ]
     })
   }else if(type == '001'){

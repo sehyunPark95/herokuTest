@@ -1740,12 +1740,6 @@ app.post('/doc',function(req,res){
           "valueType": "TEXT"
         },{
           "name": "HOLDTYN",
-          "value": "Y",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },{
-          "name": "HOLDTYN",
           "value": "N",
           "type": "TEXT",
           "action": "EQ",
@@ -1767,8 +1761,13 @@ app.post('/doc',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
-        },
-        {
+        },{
+          "name": "CUSTHP",
+          "value": "01051968803",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },{
           "name": "CUSTNM",
           "value": "최은빈",
           "type": "TEXT",
@@ -1793,8 +1792,13 @@ app.post('/doc',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
-        },
-        {
+        },{
+          "name": "CUSTHP",
+          "value": "01083498850",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },{
           "name": "CUSTNM",
           "value": "이미영",
           "type": "TEXT",
@@ -1810,32 +1814,6 @@ app.post('/doc',function(req,res){
         },{
           "name": "INSUREDNM",
           "value": "이미영", 
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },{
-          "name": "KEY2",
-          "value": "40",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "CUSTNM",
-          "value": "최은빈",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "PERSONNO",
-          "value": "8712232",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },{
-          "name": "INSUREDNM",
-          "value": "이", 
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -1891,12 +1869,6 @@ app.post('/doc',function(req,res){
       ],
       "userVariable": [
         {
-          "name": "RSLT",
-          "value": 'Y',
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },{
           "name": "RSLT",
           "value": 'Y',
           "type": "TEXT",

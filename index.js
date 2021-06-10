@@ -732,6 +732,7 @@ app.post('/HappyCall',function(req,res){
     })
   }else if(type == '107'){
     console.log('유효성체크')
+    console.log(req.body.userInfo.userVariables.cicRequest.value)
     res.status(200).json( {
       "data": [
         {
@@ -831,7 +832,7 @@ app.post('/HappyCall',function(req,res){
       ]
     })
   }else if(type == '004'){
-    console.log(req.body.userInfo.userVariables.cicRequest.value)
+    
     console.log('----영업일확인----')
     res.status(200).json( {
       "data": [

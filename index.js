@@ -831,6 +831,7 @@ app.post('/HappyCall',function(req,res){
       ]
     })
   }else if(type == '004'){
+    console.log(req.body.userInfo.userVariables.cicRequest.value)
     console.log('----영업일확인----')
     res.status(200).json( {
       "data": [

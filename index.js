@@ -707,7 +707,7 @@ app.post('/max2',function(req,res){
     })
   }else if(type == '107'){
     console.log('유효성체크')
-    res.status(200).json(null)
+    res.status(200).json({"error":"Y"})
   }
 })
 

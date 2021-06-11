@@ -710,7 +710,7 @@ app.post('/max2',function(req,res){
     res.status(200).json({
       "data":[],
       "userVariable": [
-        
+        {"error":"error"}
       ]
     })
   }

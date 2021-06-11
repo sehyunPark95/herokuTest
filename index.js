@@ -708,7 +708,19 @@ app.post('/max2',function(req,res){
   }else if(type == '107'){
     console.log('유효성체크')
     res.status(200).json({
-      "data":[{"ERROR":"99"}]
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
     })
   }
 })

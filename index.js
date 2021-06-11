@@ -1754,6 +1754,18 @@ app.post('/doc',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
+        },        {
+          "name": "HOLDTYN",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },        {
+          "name": "HOLDTYN",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
         }
       ]
     })

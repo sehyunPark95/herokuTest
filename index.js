@@ -1855,7 +1855,7 @@ app.post('/doc',function(req,res){
       "userVariable": [
         {
           "name": "GUIDECD",
-          "value": "05L004M011S019",
+          "value": "04L001M001S001",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

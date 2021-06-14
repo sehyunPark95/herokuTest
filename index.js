@@ -711,10 +711,10 @@ app.post('/max2',function(req,res){
     })
   }else if(type == '107'){
     console.log('유효성체크')
-    var data = ('test')
-    fs.writeFile('./happyLog.log', data, (err) => {
+    var data = 'test\n';
+    fs.writeFile('./test.txt', data, (err) => {
       if (err) throw err;
-     
+      console.log('qq')
     });
 
     res.status(200).json({

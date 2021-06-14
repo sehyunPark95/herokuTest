@@ -10,8 +10,6 @@ const { JSDOM } = require( "jsdom" );
 const { window } = new JSDOM( "" );
 const $ = require( "jquery" )( window );
 const request = require('request')
-import fs from 'fs';
-const customLogStream = fs.createWriteStream('./log/custom-log.log');
 /////커밋테스트
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
@@ -32,12 +30,6 @@ app.post('/max2',function(req,res){
     console.log('처리결과: ',req.body.userInfo.userVariables.PROCRSLT.value)
     console.log('정형화: ',req.body.userInfo.userVariables.CNSLHISTSTAND.value)
     console.log('사용자발화: ',stt)
-    export const Logger = {
-      writeLog(message) {
-          const log = `테스트\n`;
-          customLogStream.write(log);
-      }
-  }  
     res.status(200).json( {
       "data": [
         {

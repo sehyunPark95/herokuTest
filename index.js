@@ -262,7 +262,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "SHRTPRODNM2",
-          "value": "하나로암보험2",
+          "value": "어린이보험",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -311,7 +311,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "SHRTPRODNM3",
-          "value": "하나로암보험3",
+          "value": "실손보험",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -478,7 +478,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "ACNTCNT",
-          "value": "1",
+          "value": "2",
           "type": "NUMBER",
           "action": "EQ",
           "valueType": "NUMBER"
@@ -520,7 +520,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "BANKNM2",
-          "value": "국민은행2",
+          "value": "카카오뱅크",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -548,7 +548,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "BANKNM3",
-          "value": "국민은행3",
+          "value": "우리은행",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -576,7 +576,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "BANKNM4",
-          "value": "국민은행4",
+          "value": "신한은행",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -604,7 +604,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "BANKNM5",
-          "value": "국민은행5",
+          "value": "하나은행",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -635,7 +635,7 @@ app.post('/max2',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": "1",
+          "value": "2",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

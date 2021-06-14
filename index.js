@@ -478,7 +478,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "ACNTCNT",
-          "value": "0",
+          "value": "1",
           "type": "NUMBER",
           "action": "EQ",
           "valueType": "NUMBER"

@@ -125,7 +125,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "DBDIV",
-          "value": "D",
+          "value": "L",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -474,7 +474,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "ACNTCNT",
-          "value": "3",
+          "value": "0",
           "type": "NUMBER",
           "action": "EQ",
           "valueType": "NUMBER"

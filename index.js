@@ -150,7 +150,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "INSULOANINTYN",
-          "value": "Y",
+          "value": "N",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

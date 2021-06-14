@@ -15,10 +15,6 @@ var winston = require('winston')
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 5000));
-app.get('/',function(req,res){
-  res.sendFile(__dirname+'/log.html')
-})
-const fs = require('fs')
 
 //////////////납입최고 메인 테스트!!!!/////////////////
 app.post('/max2',function(req,res){
@@ -711,30 +707,6 @@ app.post('/max2',function(req,res){
     })
   }else if(type == '107'){
     console.log('유효성체크')
-    
-    var data = 'test';
-    fs.open('./test.txt', 'w', function(err, fd) {
-      if(err) {
-          console.log('파일 오픈 시 에러 발생');
-          console.dir(err);
-          return;
-      }
-      
-      var buf = Buffer.from('안녕!\n');
-      fs.write(fd, buf, 0, buf.length, null, function(err, written, buffer) {
-          if(err) {
-              console.log('파일 쓰기 시 에러 발생');
-              console.dir(err);
-              return;
-          }
-          console.log('파일 쓰기 완료함.');
-          
-          fs.close(fd, function() {
-              console.log('파일 닫기 완료함');
-          });
-      });
-  });
-
 
     res.status(200).json({
       "data":[{

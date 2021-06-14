@@ -1756,13 +1756,19 @@ app.post('/doc',function(req,res){
           "valueType": "TEXT"
         },        {
           "name": "HOLDTYN",
-          "value": "N",
+          "value": "Y",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },        {
           "name": "HOLDTYN",
-          "value": "Y",
+          "value": "N",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },       {
+          "name": "HOLDTYN",
+          "value": "N",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -1910,6 +1916,12 @@ app.post('/doc',function(req,res){
       ],
       "userVariable": [
         {
+          "name": "RSLT",
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },        {
           "name": "RSLT",
           "value": 'Y',
           "type": "TEXT",

@@ -23,12 +23,15 @@ app.get('/',function(req,res){
 //////////////납입최고 메인 테스트!!!!/////////////////
 app.post('/max2',function(req,res){
   var type = req.body.userInfo.userVariables.BZKNDCOD.value
+  var stt = req.body.userInfo.query;
   if(type == '003'){
     console.log('----통화처리결과----')
     console.log('업무코드: ',req.body.userInfo.userVariables.TASKDTLDIV.value)
     console.log('업무명: ',req.body.userInfo.userVariables.TASKDTLDIVNM.value)
     console.log('통화결과: ',req.body.userInfo.userVariables.CALLRSLT.value)
     console.log('처리결과: ',req.body.userInfo.userVariables.PROCRSLT.value)
+    console.log('정형화: ',req.body.userInfo.userVariables.CNSLHISTSTAND.value)
+    console.log('사용자발화: ',stt)
     res.status(200).json( {
       "data": [
         {

@@ -10,7 +10,7 @@ const { JSDOM } = require( "jsdom" );
 const { window } = new JSDOM( "" );
 const $ = require( "jquery" )( window );
 const request = require('request')
-var winston = require('winston');
+var winston = require('winston')
 /////커밋테스트
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())

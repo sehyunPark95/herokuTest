@@ -17,6 +17,34 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/',function(req,res){
   res.sendFile(__dirname+'/log.html')
 })
+const fs = require('fs');
+const logDir = './log.log'
+
+function log(info){
+  console.log(info);
+  if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir);
+  }
+    
+  var logger = new (winston.Logger)({
+      transports: [
+        new (require('winston-daily-rotate-file'))({
+          level: 'info',
+          prepend: true,
+          timestamp: function(){ 
+              return moment().format("YYYY-MM-DD HH:mm:ss");
+            }
+        })
+      ]
+    });
+try{
+    logger.info(info);
+  }catch(exception){
+    logger.error("ERROR=>" +exception);
+  }
+}
+
+var info = "로그로 남길 내용들";
 
 //////////////납입최고 메인 테스트!!!!/////////////////
 app.post('/max2',function(req,res){
@@ -30,6 +58,7 @@ app.post('/max2',function(req,res){
     console.log('처리결과: ',req.body.userInfo.userVariables.PROCRSLT.value)
     console.log('정형화: ',req.body.userInfo.userVariables.CNSLHISTSTAND.value)
     console.log('사용자발화: ',stt)
+    log('test')
     res.status(200).json( {
       "data": [
         {

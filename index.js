@@ -129,7 +129,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "DBDIV",
-          "value": "L",
+          "value": "D",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -669,7 +669,7 @@ app.post('/max2',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": "Y",
+          "value": "N",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

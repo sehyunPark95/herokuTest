@@ -18,7 +18,7 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/',function(req,res){
   res.sendFile(__dirname+'/log.html')
 })
-const fs = require('fs');
+const fs = require('fs')
 
 //////////////납입최고 메인 테스트!!!!/////////////////
 app.post('/max2',function(req,res){
@@ -711,6 +711,12 @@ app.post('/max2',function(req,res){
     })
   }else if(type == '107'){
     console.log('유효성체크')
+    var data = ('test')
+    fs.writeFile('./happyLog.log', data, (err) => {
+      if (err) throw err;
+     
+    });
+
     res.status(200).json({
       "data":[{
         "variableName":"DUMMY",

@@ -1768,7 +1768,7 @@ app.post('/doc',function(req,res){
       "userVariable": [
         {
           "name": "KEY2",
-          "value": "40",
+          "value": "30",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

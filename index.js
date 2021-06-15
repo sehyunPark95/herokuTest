@@ -689,7 +689,7 @@ app.post('/max2',function(req,res){
   }else if(type == '006'){
     console.log('----인증번호확인----')
     var authCode = req.body.userInfo.userVariables.AUTHCODE.value;
-    authCode = authCode == '123456' ? 'Y': 'N';
+    authCode = authCode == '111111' ? 'Y': 'N';
     res.status(200).json({
       "data":[{
         "variableName":"DUMMY",
@@ -775,7 +775,7 @@ app.post('/HappyCall',function(req,res){
   }else if(type == '006'){
     console.log('----인증번호확인----')
     var authCode = req.body.userInfo.userVariables.AUTHCODE.value;
-    authCode = authCode == '123456' ? 'Y': 'N';
+    authCode = authCode == '111111' ? 'Y': 'N';
     res.status(200).json({
       "data":[{
         "variableName":"DUMMY",
@@ -839,7 +839,7 @@ app.post('/HappyCall',function(req,res){
         },
         {
           "name": "PERSONNO",
-          "value": "9510053",
+          "value": "1111111",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

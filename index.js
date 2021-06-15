@@ -80,7 +80,7 @@ app.post('/max2',function(req,res){
         },
         {
           "name": "PERSONNO",
-          "value": "9510053",
+          "value": "1111111",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

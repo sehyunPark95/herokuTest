@@ -1772,7 +1772,15 @@ app.post('/doc',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
-        },{
+        },
+        {
+          "name": "CUSTHP",
+          "value": "01051968803",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
           "name": "CUSTNM",
           "value": "이미영",
           "type": "TEXT",

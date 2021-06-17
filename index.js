@@ -967,231 +967,329 @@ app.post('/HappyCall',function(req,res){
     })
   }else if(type == '106'){
     console.log('----해피콜스크립트정보----')
-    res.status(200).json({
-      "data":[{
-        "variableName":"DUMMY",
-        "value":"true"
-      }],
-      "userVariable": [
-        {
-          "name": "QUESTCNT",
-          "value": "10",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD1",
-          "value": "400101",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD2",
-          "value": "400105",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD3",
-          "value": "400701",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD4",
-          "value": "400201",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD5",
-          "value": "400702",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD6",
-          "value": "400704",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD7",
-          "value": "100204",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD8",
-          "value": "300907",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD9",
-          "value": "300909",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD10",
-          "value": "300918",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD11",
-          "value": "301601",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD12",
-          "value": "301701",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD13",
-          "value": "300202",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD14",
-          "value": "300201",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD15",
-          "value": "300804",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD16",
-          "value": "301302",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD17",
-          "value": "301303",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD18",
-          "value": "301301",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD19",
-          "value": "301901",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD20",
-          "value": "300801",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD21",
-          "value": "300905",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD22",
-          "value": "300910",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD23",
-          "value": "300911",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD24",
-          "value": "300803",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD25",
-          "value": "400401",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD26",
-          "value": "10",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD27",
-          "value": "10",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD28",
-          "value": "10",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD29",
-          "value": "10",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "QUESTCD30",
-          "value": "10",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        }
-      ]
-    })
+    
+    if(true){
+      res.status(200).json({
+        "data":[{
+          "variableName":"DUMMY",
+          "value":"true"
+        }],
+        "userVariable": [
+          {
+            "name": "QUESTCNT",
+            "value": "10",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD1",
+            "value": "400101",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD2",
+            "value": "400105",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD3",
+            "value": "400701",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD4",
+            "value": "200802",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD5",
+            "value": "200104",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD6",
+            "value": "300916",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD7",
+            "value": "300918",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD8",
+            "value": "301901",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD9",
+            "value": "300910",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD10",
+            "value": "300911",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD11",
+            "value": "400401",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          }
+        ]
+      })
+    }else{
+      res.status(200).json({
+        "data":[{
+          "variableName":"DUMMY",
+          "value":"true"
+        }],
+        "userVariable": [
+          {
+            "name": "QUESTCNT",
+            "value": "10",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD1",
+            "value": "400101",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD2",
+            "value": "400105",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD3",
+            "value": "400701",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD4",
+            "value": "400201",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD5",
+            "value": "400702",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD6",
+            "value": "400704",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD7",
+            "value": "100204",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD8",
+            "value": "300907",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD9",
+            "value": "300909",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD10",
+            "value": "300918",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD11",
+            "value": "301601",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD12",
+            "value": "301701",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD13",
+            "value": "300202",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD14",
+            "value": "300201",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD15",
+            "value": "300804",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD16",
+            "value": "301302",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD17",
+            "value": "301303",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD18",
+            "value": "301301",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD19",
+            "value": "301901",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD20",
+            "value": "300801",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD21",
+            "value": "300905",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD22",
+            "value": "300910",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD23",
+            "value": "300911",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD24",
+            "value": "300803",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD25",
+            "value": "400401",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD26",
+            "value": "10",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD27",
+            "value": "10",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD28",
+            "value": "10",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD29",
+            "value": "10",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          },
+          {
+            "name": "QUESTCD30",
+            "value": "10",
+            "type": "TEXT",
+            "action": "EQ",
+            "valueType": "TEXT"
+          }
+        ]
+      })
+    }
+   
+  
   }
 })
 /////////////////////////////////////////

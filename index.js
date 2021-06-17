@@ -1872,14 +1872,14 @@ app.post('/doc',function(req,res){
           "valueType": "TEXT"
         },{
           "name": "CUSTNM",
-          "value": "이미영",
+          "value": "최은빈",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },
         {
           "name": "PERSONNO",
-          "value": "6405302",
+          "value": "8712232",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -1717,7 +1717,7 @@ app.post('/retiring_pension_ob',function(req,res){
         },
         {
           "name": "OBLISTDIV",
-          "value": "TIR",
+          "value": "PIC",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

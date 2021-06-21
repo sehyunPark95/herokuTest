@@ -705,7 +705,7 @@ app.post('/max2',function(req,res){
         }
       ]
     })
-  }else if(type == '107'){
+  }else if(type == '008'){
     console.log('유효성체크')
 
     res.status(200).json({
@@ -728,7 +728,7 @@ app.post('/max2',function(req,res){
 //
 app.post('/HappyCall',function(req,res){
   var type = req.body.userInfo.userVariables.BZKNDCOD.value
-    
+    console.log(type)
   if(type == '003'){
     console.log('----통화처리결과----')
     console.log('업무코드: ',req.body.userInfo.userVariables.TASKDTLDIV.value)
@@ -745,7 +745,7 @@ app.post('/HappyCall',function(req,res){
         }
       ]
     })
-  }else if(type == '107'){
+  }else if(type == '008'){
     console.log('유효성체크')
     console.log(req.body.userInfo.userVariables.cicRequest.value)
     res.status(200).json( {

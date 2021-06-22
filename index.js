@@ -1005,56 +1005,56 @@ app.post('/HappyCall',function(req,res){
           },
           {
             "name": "QUESTCD4",
-            "value": "400702",
+            "value": "200702",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD5",
-            "value": "400704",
+            "value": "200706",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD6",
-            "value": "301302",
+            "value": "400301",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD7",
-            "value": "301303",
+            "value": "400302",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD8",
-            "value": "301301",
+            "value": "301701",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD9",
-            "value": "100202",
+            "value": "300202",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD10",
-            "value": "100204",
+            "value": "300201",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD11",
-            "value": "100205",
+            "value": "300803",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"

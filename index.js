@@ -1005,14 +1005,14 @@ app.post('/HappyCall',function(req,res){
           },
           {
             "name": "QUESTCD4",
-            "value": "400702",
+            "value": "301302",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD5",
-            "value": "400704",
+            "value": "301302",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
@@ -1026,35 +1026,35 @@ app.post('/HappyCall',function(req,res){
           },
           {
             "name": "QUESTCD7",
-            "value": "301303",
+            "value": "301302",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD8",
-            "value": "301301",
+            "value": "301302",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD9",
-            "value": "100202",
+            "value": "301302",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD10",
-            "value": "100204",
+            "value": "200702",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD11",
-            "value": "100205",
+            "value": "200702",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
@@ -1426,7 +1426,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "RTRPENSIONDIV",
-          "value": "DC",
+          "value": "DB",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -1447,14 +1447,14 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "CNTRNUM",
-          "value": "1234567",
+          "value": "123456",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },
         {
           "name": "PAYRCVYN",
-          "value": "N",
+          "value": "Y",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -1468,7 +1468,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "DCJOINYN",
-          "value": "Y",
+          "value": "N",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

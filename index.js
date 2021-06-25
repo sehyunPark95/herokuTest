@@ -1468,7 +1468,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "DCJOINYN",
-          "value": "Y",
+          "value": "N",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

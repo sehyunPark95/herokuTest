@@ -1896,6 +1896,56 @@ app.post('/doc',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
+        },        {
+          "name": "KEY2",
+          "value": "40",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },{
+          "name": "CUSTNM",
+          "value": "최은빈",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PERSONNO",
+          "value": "8712232",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },{
+          "name": "INSUREDNM",
+          "value": "최은빈", 
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },        {
+          "name": "KEY2",
+          "value": "40",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },{
+          "name": "CUSTNM",
+          "value": "최은빈",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "PERSONNO",
+          "value": "8712232",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },{
+          "name": "INSUREDNM",
+          "value": "이미영", 
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
         }
       ]
     })

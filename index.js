@@ -1426,7 +1426,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "RTRPENSIONDIV",
-          "value": "IRP",
+          "value": "DB",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -1447,7 +1447,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "CNTRNUM",
-          "value": "null",
+          "value": "123456",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -1426,7 +1426,7 @@ app.post('/retiring_pension_in',function(req,res){
         },
         {
           "name": "RTRPENSIONDIV",
-          "value": "DB",
+          "value": "DC",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -728,9 +728,7 @@ app.post('/max2',function(req,res){
 //
 app.post('/HappyCall',function(req,res){
   var type = req.body.userInfo.userVariables.BZKNDCOD.value
-  var type2 = req.body.userInfo.userVariables.KEY1.value
     console.log(type)
-   
   if(type == '003'){
     console.log('----통화처리결과----')
     console.log('업무코드: ',req.body.userInfo.userVariables.TASKDTLDIV.value)
@@ -749,7 +747,8 @@ app.post('/HappyCall',function(req,res){
     })
   }else if(type == '008'){
     console.log('유효성체크')
-    console.log(type2)
+    console.log(req.body.userInfo.userVariables.KEY1.value)
+    console.log(req.body.userInfo.userVariables.KEY2.value)
     console.log(req.body.userInfo.userVariables.cicRequest.value)
     res.status(200).json( {
       "data": [

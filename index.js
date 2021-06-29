@@ -747,11 +747,6 @@ app.post('/HappyCall',function(req,res){
     })
   }else if(type == '008'){
     console.log('유효성체크')
-    console.log('-----------------------------')
-    console.log('key1:',req.body.userInfo.userVariables.KEY1.value)
-    console.log('key2:',req.body.userInfo.userVariables.KEY2.value)
-    console.log('------------------')
-    console.log(req.body.userInfo.userVariables.cicRequest.value)
     res.status(200).json( {
       "data": [
         {

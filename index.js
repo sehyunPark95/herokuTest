@@ -1718,7 +1718,7 @@ app.post('/retiring_pension_ob',function(req,res){
         },
         {
           "name": "OBLISTDIV",
-          "value": "NIR",
+          "value": "NDC",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

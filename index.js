@@ -1798,7 +1798,7 @@ app.post('/retiring_pension_ob',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": 'N',
+          "value": 'Y',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

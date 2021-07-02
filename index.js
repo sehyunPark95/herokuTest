@@ -1078,84 +1078,84 @@ app.post('/HappyCall',function(req,res){
         "userVariable": [
           {
             "name": "QUESTCNT",
-            "value": "10",
+            "value": "15",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD1",
-            "value": "400101",
+            "value": "600101",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD2",
-            "value": "400105",
+            "value": "600102",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD3",
-            "value": "400701",
+            "value": "600103",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD4",
-            "value": "400201",
+            "value": "600104",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD5",
-            "value": "400702",
+            "value": "600107",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD6",
-            "value": "400704",
+            "value": "600105",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD7",
-            "value": "100204",
+            "value": "600108",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD8",
-            "value": "300907",
+            "value": "600201",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD9",
-            "value": "300909",
+            "value": "600301",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD10",
-            "value": "300918",
+            "value": "600302",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"
           },
           {
             "name": "QUESTCD11",
-            "value": "301601",
+            "value": "600109",
             "type": "TEXT",
             "action": "EQ",
             "valueType": "TEXT"

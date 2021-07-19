@@ -2092,6 +2092,18 @@ app.post('/doc',function(req,res){
   }
 })
 //////////////////////////////////////////
+app.post('music',function(req,res){
+  setTimeout( res.status(200).json( {
+    "data": [
+      {
+        "variableName" : "TEST",
+        "value" : "Y"
+      }
+    ]
+  }),1300)
+ 
+})
+
 
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));

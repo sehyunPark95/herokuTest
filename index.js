@@ -2092,7 +2092,7 @@ app.post('/doc',function(req,res){
   }
 })
 //////////////////////////////////////////
-app.post('music',function(req,res){
+app.post('/music',function(req,res){
   res.setTimeout(status(200).json( {
     "data": [
       {

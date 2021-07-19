@@ -2093,16 +2093,16 @@ app.post('/doc',function(req,res){
 })
 //////////////////////////////////////////
 app.post('/music',function(req,res){
-  res.status(200).json( setTimeout(function(){
-    return {
+  setTimeout(function(){
+    return res.status(200).json({
       "data": [
         {
           "variableName" : "TEST",
           "value" : "Y"
         }
       ]
-    }
-  },1300))
+    })
+  },1300)
 }) 
 
 

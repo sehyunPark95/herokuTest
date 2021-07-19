@@ -2102,7 +2102,7 @@ app.post('/music',function(req,res){
         }
       ]
     })
-  },1300)
+  },1000)
 }) 
 
 

@@ -2093,15 +2093,17 @@ app.post('/doc',function(req,res){
 })
 //////////////////////////////////////////
 app.post('/music',function(req,res){
-  res.status(200).json(setTimeout( {
-    "data": [
-      {
-        "variableName" : "TEST",
-        "value" : "Y"
-      }
-    ]
-  }),1300)
-})
+  res.status(200).json( setTimeout(function(){
+    return {
+      "data": [
+        {
+          "variableName" : "TEST",
+          "value" : "Y"
+        }
+      ]
+    }
+  },1300))
+}) 
 
 
 app.listen(app.get('port'), function () {

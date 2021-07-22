@@ -2000,13 +2000,13 @@ app.post('/doc',function(req,res){
       "userVariable": [
         {
           "name": "KEY2",
-          "value": "40",
+          "value": "30",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },{
           "name": "CUSTNM",
-          "value": "이길동",
+          "value": "홍길동",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

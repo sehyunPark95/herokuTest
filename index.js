@@ -2019,7 +2019,7 @@ app.post('/doc',function(req,res){
           "valueType": "TEXT"
         },{
           "name": "INSUREDNM",
-          "value": "홍길동", 
+          "value": "이길동", 
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

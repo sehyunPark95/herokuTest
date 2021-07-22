@@ -2000,7 +2000,7 @@ app.post('/doc',function(req,res){
       "userVariable": [
         {
           "name": "KEY2",
-          "value": "30",
+          "value": "40",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -2006,7 +2006,7 @@ app.post('/doc',function(req,res){
           "valueType": "TEXT"
         },{
           "name": "CUSTNM",
-          "value": "홍길동",
+          "value": "이길동",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -2000,7 +2000,7 @@ app.post('/doc',function(req,res){
       "userVariable": [
         {
           "name": "KEY2",
-          "value": "40",
+          "value": "30",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -2019,7 +2019,7 @@ app.post('/doc',function(req,res){
           "valueType": "TEXT"
         },{
           "name": "INSUREDNM",
-          "value": "이길동", 
+          "value": "홍길동", 
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

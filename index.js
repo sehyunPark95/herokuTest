@@ -2147,7 +2147,6 @@ app.post('/mun',function(req,res){
   }else if(type == '007'){
     console.log('----인증번호확인----')
     var authCode = req.body.userInfo.userVariables.AUTHCODE.value;
-    authCode = authCode == '123456' ? 'Y': 'N';
     res.status(200).json({
       "data":[{
         "variableName":"DUMMY",
@@ -2156,7 +2155,7 @@ app.post('/mun',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": authCode,
+          "value": '111111',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -2249,6 +2248,13 @@ app.post('/mun',function(req,res){
         {
           "name": "RSLT",
           "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "INPUTDT",
+          "value": "null",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

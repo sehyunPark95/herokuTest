@@ -2189,7 +2189,7 @@ app.post('/mun',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": "Y",
+          "value": "N",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

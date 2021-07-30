@@ -2106,7 +2106,7 @@ app.post('/music',function(req,res){
 }) 
 
 ////////////////////문제//////////////////////
-app.post('/retiring_pension_in',function(req,res){
+app.post('/mun',function(req,res){
   var type = req.body.userInfo.userVariables.BZKNDCOD.value
     
   if(type == '003'){

@@ -2237,7 +2237,7 @@ app.post('/mun',function(req,res){
         }
       ]
     })
-  }else if(type == '003'){
+  }else if(type == '013'){
     console.log('----예약가능확인----')
     res.status(200).json({
       "data":[{

@@ -2140,7 +2140,8 @@ app.post('/mun',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
-        }
+        },
+        
       ]
     })
   }else if(type == '007'){
@@ -2190,6 +2191,13 @@ app.post('/mun',function(req,res){
         {
           "name": "RSLT",
           "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "REDT",
+          "value": '0812',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

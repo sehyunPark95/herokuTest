@@ -2251,6 +2251,13 @@ app.post('/mun',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
+        },
+        {
+          "name": "INPUTDTN",
+          "value": "0815",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
         }
       ]
     })

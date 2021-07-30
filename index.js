@@ -2105,7 +2105,150 @@ app.post('/music',function(req,res){
   },3000)
 }) 
 
-
+////////////////////문제//////////////////////
+app.post('/retiring_pension_in',function(req,res){
+  var type = req.body.userInfo.userVariables.BZKNDCOD.value
+    
+  if(type == '003'){
+    console.log('----통화처리결과----')
+    console.log('업무코드: ',req.body.userInfo.userVariables.TASKDTLDIV.value)
+    console.log('업무명: ',req.body.userInfo.userVariables.TASKDTLDIVNM.value)
+    console.log('통화결과: ',req.body.userInfo.userVariables.CALLRSLT.value)
+    console.log('처리결과: ',req.body.userInfo.userVariables.PROCRSLT.value)
+    console.log('사용자발화: ',req.body.userInfo.query)
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "DUMMY",
+          "value" : "RA30"
+        }
+      ]
+    })
+  }else if(type == '001'){
+    console.log('고객유무확인')
+    res.status(200).json( {
+      "data": [
+        {
+          "variableName" : "TASKTLDIV",
+          "value" : "RA30"
+        }
+      ],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '007'){
+    console.log('----인증번호확인----')
+    var authCode = req.body.userInfo.userVariables.AUTHCODE.value;
+    authCode = authCode == '123456' ? 'Y': 'N';
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": authCode,
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '005'){
+    console.log('예약확정')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '002'){
+    console.log('----(예약유무확인)----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '006'){
+    console.log('----알림톡발송 퇴직연금----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '004'){
+    console.log('----예약취소요청----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }else if(type == '003'){
+    console.log('----예약가능확인----')
+    res.status(200).json({
+      "data":[{
+        "variableName":"DUMMY",
+        "value":"true"
+      }],
+      "userVariable": [
+        {
+          "name": "RSLT",
+          "value": "Y",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
+      ]
+    })
+  }
+})
 app.listen(app.get('port'), function () {
   console.log('App is running, server is listening on port ', app.get('port'));
 });

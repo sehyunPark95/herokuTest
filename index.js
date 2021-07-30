@@ -2107,7 +2107,7 @@ app.post('/music',function(req,res){
 
 ////////////////////문제//////////////////////
 app.post('/mun',function(req,res){
-  var type = req.body.userInfo.userVariables.BZKNDCOD.value
+  var type = req.body.userInfo.userVariables.bzKndCod.value
     
   if(type == '003'){
     console.log('----통화처리결과----')

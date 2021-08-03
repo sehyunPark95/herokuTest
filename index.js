@@ -2121,13 +2121,13 @@ app.post('/mun',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": 'N',
+          "value": 'Y',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },{
           "name": "CUSTNO",
-          "value": 'null',
+          "value": '홍길동',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

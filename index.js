@@ -2147,7 +2147,7 @@ app.post('/mun',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": 'AUTHNOCODE',
+          "value": AUTHNOCODE,
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

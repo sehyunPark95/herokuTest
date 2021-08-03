@@ -2193,13 +2193,6 @@ app.post('/mun',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
-        },
-        {
-          "name": "RSLT",
-          "value": REDT != '0812' ? 'Y':'N',
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
         }
       ]
     })

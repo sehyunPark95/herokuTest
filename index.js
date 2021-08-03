@@ -2127,7 +2127,7 @@ app.post('/mun',function(req,res){
           "valueType": "TEXT"
         },{
           "name": "CUSTNO",
-          "value": '',
+          "value": 'null',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

@@ -2188,15 +2188,15 @@ app.post('/mun',function(req,res){
       }],
       "userVariable": [
         {
-          "name": "RSLT",
-          "value": "N",
+          "name": "REDT",
+          "value": '0812',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
         },
         {
-          "name": "REDT",
-          "value": '0812',
+          "name": "RSLT",
+          "value": REDT != '0812' ? 'Y':'N',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

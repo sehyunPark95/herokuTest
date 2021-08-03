@@ -2109,22 +2109,7 @@ app.post('/music',function(req,res){
 app.post('/mun',function(req,res){
   var type = req.body.userInfo.userVariables.bzKndCod.value
     
-  if(type == '003'){
-    console.log('----통화처리결과----')
-    console.log('업무코드: ',req.body.userInfo.userVariables.TASKDTLDIV.value)
-    console.log('업무명: ',req.body.userInfo.userVariables.TASKDTLDIVNM.value)
-    console.log('통화결과: ',req.body.userInfo.userVariables.CALLRSLT.value)
-    console.log('처리결과: ',req.body.userInfo.userVariables.PROCRSLT.value)
-    console.log('사용자발화: ',req.body.userInfo.query)
-    res.status(200).json( {
-      "data": [
-        {
-          "variableName" : "DUMMY",
-          "value" : "RA30"
-        }
-      ]
-    })
-  }else if(type == '001'){
+  if(type == '001'){
     console.log('고객유무확인')
     res.status(200).json( {
       "data": [
@@ -2136,11 +2121,17 @@ app.post('/mun',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": 'Y',
+          "value": 'N',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
-        },
+        },{
+          "name": "CUSTNO",
+          "value": '',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        }
         
       ]
     })
@@ -2155,7 +2146,14 @@ app.post('/mun',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": '111111',
+          "value": 'Y',
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
+        },
+        {
+          "name": "AUTHNO",
+          "value": '123456',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -2176,7 +2174,15 @@ app.post('/mun',function(req,res){
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
+        },
+        {
+          "name": "INPUTDT",
+          "value": "",
+          "type": "TEXT",
+          "action": "EQ",
+          "valueType": "TEXT"
         }
+        
       ]
     })
   }else if(type == '002'){
@@ -2237,7 +2243,7 @@ app.post('/mun',function(req,res){
         }
       ]
     })
-  }else if(type == '013'){
+  }else if(type == '003'){
     console.log('----예약가능확인----')
     res.status(200).json({
       "data":[{
@@ -2248,13 +2254,6 @@ app.post('/mun',function(req,res){
         {
           "name": "RSLT",
           "value": "Y",
-          "type": "TEXT",
-          "action": "EQ",
-          "valueType": "TEXT"
-        },
-        {
-          "name": "INPUTDTN",
-          "value": "0815",
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

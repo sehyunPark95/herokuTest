@@ -2127,7 +2127,7 @@ app.post('/mun',function(req,res){
           "valueType": "TEXT"
         },{
           "name": "CUSTNO",
-          "value": '홍길동',
+          "value": 'null',
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"
@@ -2232,6 +2232,8 @@ app.post('/mun',function(req,res){
     })
   }else if(type == '003'){
     console.log('----예약가능확인----')
+    var redt = req.body.userInfo.userVariables.REDT.value;
+    redt = redt == '0812' ? 'N': 'Y';
     res.status(200).json({
       "data":[{
         "variableName":"DUMMY",
@@ -2240,7 +2242,7 @@ app.post('/mun',function(req,res){
       "userVariable": [
         {
           "name": "RSLT",
-          "value": "Y",
+          "value": redt,
           "type": "TEXT",
           "action": "EQ",
           "valueType": "TEXT"

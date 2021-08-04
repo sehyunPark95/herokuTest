@@ -2232,7 +2232,7 @@ app.post('/mun',function(req,res){
     })
   }else if(type == '003'){
     console.log('----예약가능확인----')
-    var redt = req.body.userInfo.userVariables.REDT.value;
+    var redt = req.body.userInfo.userVariables.INPUTDT.value;
     redt = redt == '0812' ? 'N': 'Y';
     res.status(200).json({
       "data":[{
